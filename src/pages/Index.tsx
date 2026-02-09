@@ -8,6 +8,7 @@ import PremiumSection from "@/components/PremiumSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import ReferSection from "@/components/ReferSection";
 import ReviewsSection from "@/components/ReviewsSection";
+import CommercialVideoSection from "@/components/CommercialVideoSection";
 import DownloadSection from "@/components/DownloadSection";
 import Footer from "@/components/Footer";
 
@@ -34,6 +35,7 @@ const Index = () => {
         <WhyUsSection />
         <ReferSection />
         <ReviewsSection />
+        <CommercialVideoSection />
         <DownloadSection />
       </main>
       <Footer />
