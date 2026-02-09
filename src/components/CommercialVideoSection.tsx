@@ -83,13 +83,9 @@ const CommercialVideoSection = () => {
                                 ref={videoRef}
                                 loop
                                 playsInline
+                                poster={`${import.meta.env.BASE_URL}thumbnail.webp`}
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
-                                onLoadedMetadata={(e) => {
-                                    if (e.currentTarget) {
-                                        e.currentTarget.currentTime = e.currentTarget.duration / 2;
-                                    }
-                                }}
                                 className="w-full h-full object-cover cursor-pointer"
                                 onClick={handlePlayPause}
                             >
