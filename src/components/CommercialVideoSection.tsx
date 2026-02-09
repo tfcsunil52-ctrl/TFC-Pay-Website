@@ -26,6 +26,12 @@ const CommercialVideoSection = () => {
         return () => observer.disconnect();
     }, []);
 
+    useEffect(() => {
+        if (shouldLoad && videoRef.current) {
+            videoRef.current.load();
+        }
+    }, [shouldLoad]);
+
     const handlePlayPause = () => {
         if (videoRef.current) {
             if (isPlaying) {
@@ -83,6 +89,7 @@ const CommercialVideoSection = () => {
                                 ref={videoRef}
                                 loop
                                 playsInline
+                                preload="none"
                                 poster={`${import.meta.env.BASE_URL}thumbnail.webp`}
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
