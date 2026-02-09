@@ -16,7 +16,10 @@ const CommercialVideoSection = () => {
                     observer.disconnect();
                 }
             },
-            { threshold: 0.1 }
+            {
+                threshold: 0.1,
+                rootMargin: "300px 0px"
+            }
         );
 
         if (videoRef.current) {
@@ -89,7 +92,7 @@ const CommercialVideoSection = () => {
                                 ref={videoRef}
                                 loop
                                 playsInline
-                                preload="none"
+                                preload="metadata"
                                 poster={`${import.meta.env.BASE_URL}thumbnail.webp`}
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
