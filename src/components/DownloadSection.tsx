@@ -5,7 +5,7 @@ import { QrCode, Smartphone } from "lucide-react";
 
 const DownloadSection = () => {
   return (
-    <section className="py-20 relative">
+    <section className="pt-12 pb-20 relative">
       <div className="container mx-auto px-4">
         <Card className="relative bg-slate-900 border-primary/30 overflow-hidden">
           {/* Background Image with Overlay */}
@@ -64,9 +64,13 @@ const DownloadSection = () => {
                 viewport={{ once: true }}
                 className="flex justify-center"
               >
-                <div className="bg-card p-8 rounded-2xl border border-primary shadow-xl">
-                  <div className="w-48 h-48 bg-secondary rounded-xl flex items-center justify-center mb-4">
-                    <QrCode className="w-32 h-32 text-primary" />
+                <div className="bg-card p-8 rounded-2xl shadow-xl border-2 border-primary">
+                  <div className="w-48 h-48 bg-white rounded-xl flex items-center justify-center mb-4 mx-auto overflow-hidden">
+                    <img
+                      src={`${import.meta.env.BASE_URL}qr-code.png`}
+                      alt="Scan to Download"
+                      className="w-full h-full object-contain"
+                    />
                   </div>
                   <p className="text-center text-sm text-foreground font-medium">
                     Scan to Download

@@ -4,22 +4,22 @@ import { Target, BarChart3, MessageCircle, Calendar } from "lucide-react";
 
 const features = [
   {
-    icon: Target,
+    image: `${import.meta.env.BASE_URL}why%20us%20(1).webp`,
     title: "Multiple Campaigns",
     description: "Run and participate in multiple cashback campaigns simultaneously to maximize your earnings.",
   },
   {
-    icon: BarChart3,
+    image: `${import.meta.env.BASE_URL}why%20us%20(4).webp`,
     title: "Advanced Analytics",
     description: "Track your spending patterns, cashback earned, and savings with detailed insights.",
   },
   {
-    icon: MessageCircle,
+    image: `${import.meta.env.BASE_URL}why%20us%20new%20(4).webp`,
     title: "Live Chat Support",
     description: "Get instant help with our 24/7 live chat support for all your queries and issues.",
   },
   {
-    icon: Calendar,
+    image: `${import.meta.env.BASE_URL}why%20us%20new%20(1).webp`,
     title: "Event Scheduler",
     description: "Schedule your bill payments and never miss a due date with automated reminders.",
   },
@@ -50,12 +50,20 @@ const WhyUsSection = () => {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="bg-card border-border hover:border-primary/50 transition-all duration-300 text-center group"
+              className="bg-card border-border hover:border-primary/50 transition-all duration-300 text-center group overflow-hidden flex flex-col"
             >
-              <CardContent className="p-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
-                  <feature.icon className="w-8 h-8 text-primary" />
-                </div>
+              <div className="w-full aspect-square overflow-hidden bg-muted/20">
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://placehold.co/400x400?text=Image+Not+Found"; // Fallback for missing images
+                  }}
+                />
+              </div>
+              <CardContent className="p-6 flex-1 flex flex-col justify-start relative z-10 bg-card">
                 <h3 className="text-lg font-semibold text-foreground mb-2">
                   {feature.title}
                 </h3>

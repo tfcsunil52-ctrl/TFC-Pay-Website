@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight } from "lucide-react";
 import AnimatedSmartphone from "./AnimatedSmartphone";
 
 const services = [
@@ -86,18 +85,15 @@ const ServicesSection = () => {
               <Card
                 className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
               >
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center p-2.5 group-hover:bg-primary/10 transition-colors">
-                      <img
-                        src={service.icon}
-                        alt={service.title}
-                        className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                      />
-                    </div>
-                    <ArrowRight className="w-5 h-5 text-slate-600 group-hover:text-primary transition-colors" />
+                <CardContent className="p-6 flex flex-col items-center text-center">
+                  <div className="w-16 h-16 mb-6 flex items-center justify-center">
+                    <img
+                      src={service.icon}
+                      alt={service.title}
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-sm text-slate-400 leading-relaxed">

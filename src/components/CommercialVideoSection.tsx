@@ -55,7 +55,7 @@ const CommercialVideoSection = () => {
     };
 
     return (
-        <section className="py-20 relative">
+        <section className="pt-20 pb-0 relative">
             <div className="container mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/* Left - Content */}
