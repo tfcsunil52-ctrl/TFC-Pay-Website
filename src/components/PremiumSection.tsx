@@ -79,8 +79,8 @@ const PremiumSection = () => {
                         {/* Top: Icon and Text side-by-side (alternating) */}
                         <div className={`flex flex-col lg:flex-row items-center gap-4 md:gap-10 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} w-full`}>
                           {/* Icon */}
-                          <div className="flex-shrink-0">
-                            <div className="w-64 h-64 md:w-[280px] md:h-[280px] flex items-center justify-center">
+                          <div className="flex-shrink-0 w-full mb-4">
+                            <div className="w-full h-72 md:w-[280px] md:h-[280px] flex items-center justify-center">
                               <img
                                 src={`${import.meta.env.BASE_URL}${service.iconImage}`}
                                 alt={service.title}
