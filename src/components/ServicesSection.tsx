@@ -85,20 +85,22 @@ const ServicesSection = () => {
               <Card
                 className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
               >
-                <CardContent className="p-6 flex flex-col items-start text-left sm:items-center sm:text-center">
-                  <div className="w-16 h-16 mb-4 flex items-center justify-center">
+                <CardContent className="p-5 flex flex-row sm:flex-col items-center sm:items-center text-left sm:text-center gap-4 sm:gap-2">
+                  <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 sm:mb-4 flex items-center justify-center">
                     <img
                       src={service.icon}
                       alt={service.title}
                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm text-slate-400 leading-relaxed">
-                    {service.description}
-                  </p>
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-bold text-white mb-1 sm:mb-2 group-hover:text-primary transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-slate-400 leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
