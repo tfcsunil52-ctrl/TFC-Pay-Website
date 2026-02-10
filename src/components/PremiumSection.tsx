@@ -64,7 +64,7 @@ const PremiumSection = () => {
                       marginTop: isMobile ? '0' : (index > 0 ? '2rem' : '0'),
                     }}
                   >
-                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[500px] md:min-h-[35vh] flex flex-col justify-center relative">
+                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[500px] lg:min-h-[35vh] flex flex-col justify-center relative">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-no-repeat opacity-30"
@@ -78,9 +78,9 @@ const PremiumSection = () => {
                       <CardContent className="h-full p-4 md:p-8 flex flex-col gap-4 md:gap-8 justify-center relative z-10">
                         {/* Top: Icon and Text side-by-side (alternating) */}
                         <div className={`flex flex-col lg:flex-row items-center gap-4 md:gap-10 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} w-full`}>
-                          {/* Icon */}
-                          <div className="flex-shrink-0 w-full flex justify-center">
-                            <div className="w-full max-w-[320px] h-64 md:w-[280px] md:h-[280px] flex items-center justify-center">
+                          {/* Icon Container - Center on mobile, left/right on desktop */}
+                          <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:block">
+                            <div className="w-full max-w-[320px] h-64 lg:w-[280px] lg:h-[280px] flex items-center justify-center">
                               <img
                                 src={`${import.meta.env.BASE_URL}${service.iconImage}`}
                                 alt={service.title}
