@@ -46,14 +46,14 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-24 relative overflow-hidden bg-slate-950/50">
+    <section id="services" className="py-12 md:py-24 relative overflow-hidden bg-slate-950/50">
       {/* Background Decorative Mesh / Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Top Row: Smartphone + Heading */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
           {/* Left: Smartphone - Static Position, Animated Content */}
           <div className="flex justify-center items-center">
             <AnimatedSmartphone className="scale-90 md:scale-100" />
@@ -64,7 +64,7 @@ const ServicesSection = () => {
             <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold uppercase tracking-wider self-start">
               Explore Features
             </div>
-            <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 leading-tight">
+            <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
               One App, <br />
               <span className="text-primary">Limitless Possibilities.</span>
             </h2>
@@ -85,15 +85,15 @@ const ServicesSection = () => {
               <Card
                 className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
               >
-                <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 mb-6 flex items-center justify-center">
+                <CardContent className="p-6 flex flex-col items-start text-left sm:items-center sm:text-center">
+                  <div className="w-16 h-16 mb-4 flex items-center justify-center">
                     <img
                       src={service.icon}
                       alt={service.title}
                       className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                     />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
                   <p className="text-sm text-slate-400 leading-relaxed">

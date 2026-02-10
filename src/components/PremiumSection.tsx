@@ -31,11 +31,10 @@ const PremiumSection = () => {
       <div className="container mx-auto px-4">
 
         <div className="relative pb-10">
-          {/* HEADING - Sticky */}
-          {/* HEADING TRACK - Absolute positioned to control sticky duration */}
-          <div className="absolute top-0 left-0 right-0 h-[calc(100%-50vh)] pointer-events-none z-50">
-            <div className="sticky top-16 pointer-events-auto bg-background text-center mb-8 md:mb-12 pt-10 pb-6 md:pb-8">
-              <h2 className="text-5xl md:text-7xl font-bold text-foreground leading-tight flex flex-col md:flex-row items-center justify-center gap-3">
+          {/* HEADING - Sticky (Desktop Only) */}
+          <div className="hidden md:block absolute top-0 left-0 right-0 h-[calc(100%-50vh)] pointer-events-none z-50">
+            <div className="sticky top-16 pointer-events-auto bg-background/95 backdrop-blur-sm text-center mb-12 pt-10 pb-8">
+              <h2 className="md:text-7xl font-bold text-foreground leading-tight flex flex-row items-center justify-center gap-3">
                 <span>Exclusive</span>
                 <span className="text-primary">Premium</span>
                 <span>Features</span>
@@ -45,28 +44,27 @@ const PremiumSection = () => {
 
           {/* MAIN FLOW CONTENT */}
           <div className="relative z-10">
-            {/* Invisible Spacer Title to hold layout space */}
-            <div className="invisible text-center mb-8 md:mb-12 pt-10 pb-6 md:pb-8">
-              <h2 className="text-5xl md:text-7xl font-bold leading-tight flex flex-col md:flex-row items-center justify-center gap-3">
+            {/* Title - Visible & Scrolling on Mobile, Invisible Spacer on Desktop */}
+            <div className="text-center mb-8 md:mb-12 pt-0 md:pt-10 pb-6 md:pb-8 md:invisible">
+              <h2 className="text-4xl md:text-7xl font-bold text-foreground leading-tight flex flex-row flex-wrap items-center justify-center gap-x-3 gap-y-1">
                 <span>Exclusive</span>
-                <span>Premium</span>
+                <span className="text-primary">Premium</span>
                 <span>Features</span>
               </h2>
             </div>
 
-            <div className="flex flex-col gap-4 md:gap-8 max-w-7xl mx-auto">
+            <div className="flex flex-col gap-0 md:gap-8 max-w-7xl mx-auto">
               {premiumServices.map((service, index) => {
                 return (
                   <div
                     key={index}
-                    className="sticky top-56 md:top-64"
+                    className="sticky top-16 md:top-64"
                     style={{
                       zIndex: index + 10,
-                      // Add a small margin top for stacking effect if desired, or just list them
-                      marginTop: index > 0 ? '2rem' : '0',
+                      marginTop: isMobile ? '0' : (index > 0 ? '2rem' : '0'),
                     }}
                   >
-                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[300px] md:min-h-[35vh] flex flex-col justify-center relative">
+                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[auto] md:min-h-[35vh] flex flex-col justify-center relative">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-no-repeat opacity-30"
@@ -82,7 +80,7 @@ const PremiumSection = () => {
                         <div className={`flex flex-col lg:flex-row items-center gap-4 md:gap-10 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} w-full`}>
                           {/* Icon */}
                           <div className="flex-shrink-0">
-                            <div className="w-32 h-32 md:w-[280px] md:h-[280px] flex items-center justify-center">
+                            <div className="w-24 h-24 md:w-[280px] md:h-[280px] flex items-center justify-center">
                               <img
                                 src={`${import.meta.env.BASE_URL}${service.iconImage}`}
                                 alt={service.title}
@@ -110,7 +108,7 @@ const PremiumSection = () => {
                                 <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/20 flex items-center justify-center">
                                   <CheckCircle className="w-5 h-5 md:w-6 h-6 text-primary" />
                                 </div>
-                                <span className="text-foreground text-base md:text-lg font-medium whitespace-nowrap">{feature}</span>
+                                <span className="text-foreground text-sm md:text-lg font-medium">{feature}</span>
                               </li>
                             ))}
                           </ul>

@@ -96,7 +96,7 @@ const ReferSection = () => {
             </DialogTrigger>
             <DialogContent className="sm:max-w-2xl bg-zinc-950 border-zinc-800 p-0 overflow-hidden [&>button]:text-white [&>button]:opacity-100">
               <div className="grid md:grid-cols-2">
-                <div className="relative p-8 text-center">
+                <div className="relative p-6 md:p-8 text-center">
                   {/* Background Pattern */}
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
 
@@ -134,7 +134,7 @@ const ReferSection = () => {
                 </div>
 
                 {/* Right Column - QR Code */}
-                <div className="bg-zinc-900/50 p-8 flex flex-col items-center justify-center border-t md:border-t-0 md:border-l border-zinc-800">
+                <div className="bg-zinc-900/50 p-6 md:p-8 flex flex-col items-center justify-center border-t md:border-t-0 md:border-l border-zinc-800">
                   <div className="bg-white p-4 rounded-xl shadow-2xl mb-4">
                     <img
                       src={`${import.meta.env.BASE_URL}qr-code.png`}
@@ -150,7 +150,7 @@ const ReferSection = () => {
           </Dialog>
         </div>
       </motion.div>
-    </section>
+    </section >
   );
 };
 

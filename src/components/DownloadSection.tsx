@@ -5,7 +5,7 @@ import { QrCode, Smartphone } from "lucide-react";
 
 const DownloadSection = () => {
   return (
-    <section className="pt-12 pb-20 relative">
+    <section className="pt-8 pb-12 md:pt-12 md:pb-20 relative">
       <div className="container mx-auto px-4">
         <Card className="relative bg-slate-900 border-primary/30 overflow-hidden">
           {/* Background Image with Overlay */}
@@ -19,7 +19,7 @@ const DownloadSection = () => {
           {/* Content Overlay Gradient */}
           <div className="absolute inset-0 z-0 bg-gradient-to-br from-primary/20 via-transparent to-black/60 pointer-events-none" />
 
-          <CardContent className="p-8 md:p-12 relative z-10">
+          <CardContent className="p-6 md:p-12 relative z-10">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               {/* Left Content */}
               <motion.div
@@ -34,7 +34,7 @@ const DownloadSection = () => {
                   <span className="text-sm text-primary font-medium">DOWNLOAD NOW</span>
                 </div>
 
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+                <h2 className="text-2xl md:text-4xl font-bold text-foreground">
                   Get the <span className="text-primary">Cashback Wala App</span>
                 </h2>
 
