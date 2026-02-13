@@ -27,7 +27,7 @@ const features = [
 
 const WhyUsSection = () => {
   return (
-    <section id="why-us" className="py-20 relative">
+    <section id="why-us" className="py-12 md:py-16 relative">
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
 
       <motion.div
@@ -35,13 +35,13 @@ const WhyUsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="container mx-auto px-4"
+        className="container max-w-6xl mx-auto px-4"
       >
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Why Choose <span className="text-primary">TFCPAY</span>?
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             We're not just a payment app. We're your financial companion designed to help you save more and stress less.
           </p>
         </div>
@@ -64,10 +64,10 @@ const WhyUsSection = () => {
                 />
               </div>
               <CardContent className="p-6 flex-1 flex flex-col justify-start relative z-10 bg-card">
-                <h3 className="text-lg font-semibold text-foreground mb-2">
+                <h3 className="text-xl font-bold text-foreground mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
               </CardContent>

@@ -27,8 +27,8 @@ const PremiumSection = () => {
   const isMobile = useIsMobile();
 
   return (
-    <section id="premium" className="py-20 relative bg-background">
-      <div className="container mx-auto px-4">
+    <section id="premium" className="py-12 md:py-16 relative bg-background">
+      <div className="container max-w-6xl mx-auto px-4">
 
         <div className="relative pb-10">
           {/* HEADING - Sticky (Desktop Only) */}
@@ -53,7 +53,7 @@ const PremiumSection = () => {
               </h2>
             </div>
 
-            <div className="flex flex-col gap-0 md:gap-8 max-w-7xl mx-auto">
+            <div className="flex flex-col gap-0 md:gap-8">
               {premiumServices.map((service, index) => {
                 return (
                   <div
@@ -64,7 +64,7 @@ const PremiumSection = () => {
                       marginTop: isMobile ? '0' : (index > 0 ? '2rem' : '0'),
                     }}
                   >
-                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[400px] lg:min-h-[250px] flex flex-col justify-center relative">
+                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[450px] md:min-h-[400px] flex flex-col justify-center relative">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-no-repeat opacity-30"
@@ -75,43 +75,44 @@ const PremiumSection = () => {
                         }}
                       />
 
-                      <CardContent className="h-full p-4 md:p-8 flex flex-col gap-4 md:gap-8 justify-center relative z-10">
-                        {/* Top: Icon and Text side-by-side (alternating) */}
-                        <div className={`flex flex-col lg:flex-row items-center gap-4 md:gap-10 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} w-full`}>
-                          {/* Icon Container - Center on mobile, left/right on desktop */}
-                          <div className="flex-shrink-0 w-full lg:w-auto flex justify-center lg:block">
-                            <div className="w-full max-w-[240px] h-40 lg:w-[220px] lg:h-[220px] flex items-center justify-center">
-                              <img
-                                src={`${import.meta.env.BASE_URL}${service.iconImage}`}
-                                alt={service.title}
-                                className="w-full h-full object-contain"
-                              />
+                      <CardContent className="p-4 md:p-8 flex flex-col items-center justify-center relative z-10 w-full">
+                        {/* Wrapper to constrain width of both top content and pointers to the same group width */}
+                        <div className="flex flex-col items-center gap-6 w-full max-w-fit">
+                          {/* Top: Icon and Text side-by-side (alternating) */}
+                          <div className={`flex flex-col lg:flex-row items-center justify-center gap-4 md:gap-8 ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''} w-full`}>
+                            {/* Icon Container */}
+                            <div className="flex-shrink-0 flex justify-center">
+                              <div className="w-40 h-40 md:w-56 md:h-56 flex items-center justify-center">
+                                <img
+                                  src={`${import.meta.env.BASE_URL}${service.iconImage}`}
+                                  alt={service.title}
+                                  className="w-full h-full object-contain drop-shadow-2xl"
+                                />
+                              </div>
+                            </div>
+
+                            {/* Text Context */}
+                            <div className="lg:w-[500px] text-center lg:text-left">
+                              <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-3 leading-tight tracking-tight">
+                                {service.title}
+                              </h3>
+                              <p className="text-muted-foreground text-lg md:text-xl leading-relaxed">
+                                {service.description}
+                              </p>
                             </div>
                           </div>
 
-                          {/* Text Context */}
-                          <div className="flex-1 text-center lg:text-left">
-                            <h3 className="text-2xl md:text-4xl font-bold text-foreground mb-3 md:mb-4">
-                              {service.title}
-                            </h3>
-                            <p className="text-muted-foreground text-base md:text-xl leading-relaxed">
-                              {service.description}
-                            </p>
+                          {/* Bottom: Features in a row - Centered */}
+                          <div className="w-full">
+                            <ul className={`flex flex-row items-center gap-4 ${(index === 0 || index === 1) ? 'justify-between' : 'justify-center md:gap-x-12'}`}>
+                              {service.features.map((feature, idx) => (
+                                <li key={idx} className="flex items-center gap-2 py-1 px-3 rounded-full bg-secondary/20 hover:bg-secondary/40 transition-all">
+                                  <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
+                                  <span className="text-foreground text-xs md:text-sm font-semibold whitespace-nowrap">{feature}</span>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
-                        </div>
-
-                        {/* Bottom: Features in a row */}
-                        <div className="w-full pt-4 md:pt-6 border-t border-border/50">
-                          <ul className="flex flex-col md:flex-row flex-wrap justify-between gap-4 md:gap-6">
-                            {service.features.map((feature, idx) => (
-                              <li key={idx} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl bg-secondary/30 hover:bg-secondary/50 transition-colors flex-1 min-w-[200px]">
-                                <div className="flex-shrink-0 w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/20 flex items-center justify-center">
-                                  <CheckCircle className="w-5 h-5 md:w-6 h-6 text-primary" />
-                                </div>
-                                <span className="text-foreground text-sm md:text-lg font-medium">{feature}</span>
-                              </li>
-                            ))}
-                          </ul>
                         </div>
                       </CardContent>
                     </Card>

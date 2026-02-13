@@ -52,7 +52,7 @@ const FAQ = () => {
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 dark">
             <Header />
             <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4">
+                <div className="container max-w-6xl mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

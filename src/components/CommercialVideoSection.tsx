@@ -13,12 +13,14 @@ const CommercialVideoSection = () => {
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setShouldLoad(true);
-                    observer.disconnect();
+                } else {
+                    if (videoRef.current && !videoRef.current.paused) {
+                        videoRef.current.pause();
+                    }
                 }
             },
             {
                 threshold: 0.1,
-                rootMargin: "300px 0px"
             }
         );
 
@@ -55,8 +57,8 @@ const CommercialVideoSection = () => {
     };
 
     return (
-        <section className="pt-20 pb-0 relative">
-            <div className="container mx-auto px-4">
+        <section className="py-12 md:py-16 relative">
+            <div className="container max-w-6xl mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/* Left - Content */}
                     <motion.div
@@ -73,7 +75,7 @@ const CommercialVideoSection = () => {
                         <h2 className="text-4xl md:text-5xl font-bold text-foreground">
                             Experience the Future of <span className="text-primary">Digital Payments</span>
                         </h2>
-                        <p className="text-muted-foreground text-lg">
+                        <p className="text-lg text-muted-foreground leading-relaxed">
                             Discover how TFC Pay is revolutionizing the way India pays, saves, and earns cashback.
                         </p>
                     </motion.div>

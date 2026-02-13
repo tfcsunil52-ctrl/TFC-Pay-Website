@@ -22,20 +22,14 @@ const reviews = [
     rating: 4,
     review: "Great app for all bill payments. Customer support is quick and helpful. The OTT subscription is value for money.",
   },
-  {
-    name: "Sneha Reddy",
-    initials: "SR",
-    rating: 5,
-    review: "Love the refer and earn feature! Already earned ₹500 by referring my friends. The app keeps getting better with updates.",
-  },
 ];
 
 const ReviewsSection = () => {
   return (
-    <section id="reviews" className="py-20 relative">
+    <section id="reviews" className="py-12 md:py-16 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
 
-      <div className="container mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +64,7 @@ const ReviewsSection = () => {
               transition: { staggerChildren: 0.1 }
             }
           }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
           {reviews.map((review, index) => (
             <motion.div

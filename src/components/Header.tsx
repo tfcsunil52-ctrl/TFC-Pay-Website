@@ -15,10 +15,10 @@ import {
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Premium", href: "#premium" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Reviews", href: "#reviews" },
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about-us" },
+  { label: "FAQ's", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const solutions = [
@@ -45,19 +45,9 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const scrollToSection = (href: string) => {
-    setIsOpen(false);
-    if (location.pathname !== "/") {
-      navigate("/", { state: { scrollTo: href } });
-      return;
-    }
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-8 w-auto object-contain" onError={(e) => {
@@ -66,24 +56,24 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4">
-          <button
-            onClick={() => scrollToSection("#home")}
-            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-4 py-2"
+        <nav className="hidden md:flex items-center gap-6">
+          <Link
+            to="/"
+            className="text-base font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
           >
             Home
-          </button>
+          </Link>
 
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary font-medium">
+                <NavigationMenuTrigger className="bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary text-base font-medium px-2">
                   Solutions
                 </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="flex w-[600px] p-6 gap-8 bg-popover/95 backdrop-blur-sm">
+                <NavigationMenuContent className="right-0 left-auto w-auto min-w-[300px] max-w-[90vw] md:max-w-[600px]">
+                  <div className="flex flex-col md:flex-row p-4 md:p-6 gap-6 md:gap-8 bg-popover/95 backdrop-blur-sm">
                     {solutions.map((category) => (
-                      <div key={category.title} className="flex-1 space-y-4">
+                      <div key={category.title} className="flex-1 space-y-4 min-w-[200px]">
                         <h4 className="text-sm font-semibold text-foreground px-2">
                           {category.title}
                         </h4>
@@ -94,8 +84,8 @@ const Header = () => {
                                 href="#"
                                 className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted focus:bg-muted"
                               >
-                                <div className="flex items-center gap-3">
-                                  <div className="p-2 rounded-md bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
+                                <div className="flex items-start gap-3">
+                                  <div className="p-2 rounded-md bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 mt-1">
                                     <item.icon className="w-4 h-4" />
                                   </div>
                                   <div className="space-y-1">
@@ -120,17 +110,14 @@ const Header = () => {
           </NavigationMenu>
 
           {navLinks.slice(1).map((link) => (
-            <button
+            <Link
               key={link.label}
-              onClick={() => scrollToSection(link.href)}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-4 py-2"
+              to={link.href}
+              className="text-base font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
             >
               {link.label}
-            </button>
+            </Link>
           ))}
-          <Link to="/about-us" className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-4 py-2">
-            About Us
-          </Link>
         </nav>
 
 
@@ -143,13 +130,6 @@ const Header = () => {
           </SheetTrigger>
           <SheetContent side="right" className="bg-background border-border overflow-y-auto">
             <nav className="flex flex-col gap-4 mt-8">
-              <button
-                onClick={() => scrollToSection("#home")}
-                className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                Home
-              </button>
-
               <div className="space-y-4">
                 <p className="text-xs font-bold text-primary uppercase tracking-wider">Our Solutions</p>
                 {solutions.map((category) => (
@@ -170,22 +150,18 @@ const Header = () => {
                 ))}
               </div>
 
-              {navLinks.slice(1).map((link) => (
-                <button
-                  key={link.label}
-                  onClick={() => scrollToSection(link.href)}
-                  className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
-                >
-                  {link.label}
-                </button>
-              ))}
-              <Link
-                to="/about-us"
-                onClick={() => setIsOpen(false)}
-                className="text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
-              >
-                About Us
-              </Link>
+              <div className="pt-4 space-y-4 border-t border-border">
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
               <Button className="mt-4 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground">
                 <Download className="w-4 h-4" />
                 Download App

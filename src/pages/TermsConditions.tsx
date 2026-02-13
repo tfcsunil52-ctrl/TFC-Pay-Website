@@ -7,7 +7,7 @@ const TermsConditions = () => {
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 dark">
             <Header />
             <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4">
+                <div className="container max-w-6xl mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ const TermsConditions = () => {
                             <div className="grid md:grid-cols-2 gap-6">
                                 <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5 h-full">
                                     <h2 className="text-xl font-bold text-primary mb-4">4. User Responsibilities</h2>
-                                    <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                                    <ul className="list-disc ml-6 text-muted-foreground space-y-2">
                                         <li>Provide accurate Registration, Payment, and Biller Data.</li>
                                         <li>Maintain and promptly update information.</li>
                                         <li>Comply with all applicable laws.</li>
@@ -58,7 +58,7 @@ const TermsConditions = () => {
 
                                 <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5 h-full">
                                     <h2 className="text-xl font-bold text-primary mb-4">5. Prohibited Conduct</h2>
-                                    <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                                    <ul className="list-disc ml-6 text-muted-foreground space-y-2">
                                         <li>Use TFCPAY for any unlawful purpose.</li>
                                         <li>Misrepresent your identity or affiliation.</li>
                                         <li>Interfere with the operation of TFCPAY.</li>
@@ -69,7 +69,7 @@ const TermsConditions = () => {
 
                             <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5">
                                 <h2 className="text-xl font-bold text-primary mb-4">Rent Payment Terms & Conditions</h2>
-                                <ul className="list-disc list-inside text-muted-foreground space-y-2">
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
                                     <li>First time user payout needs to be done after 72hrs.</li>
                                     <li>One customer cannot make more than 2 payments in a month.</li>
                                     <li>Any fraud reported by customer on HDFC account post intimation from bank end we will provide the documents against the fraud or will refund/reverse the amount.</li>

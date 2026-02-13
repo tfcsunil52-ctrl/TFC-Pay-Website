@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-[50vh] pt-32 md:pt-32 pb-16 flex items-center relative overflow-hidden">
+    <section id="home" className="min-h-[50vh] pt-28 md:pt-32 pb-12 flex items-center relative overflow-hidden">
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container max-w-6xl mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8">
@@ -13,12 +13,12 @@ const HeroSection = () => {
               <span className="text-sm text-primary font-semibold">India's Fastest Growing Payment App</span>
             </div>
 
-            <h1 className="text-5xl md:text-8xl font-bold text-white leading-tight">
+            <h1 className="text-4xl md:text-7xl font-bold text-white leading-tight">
               Recharge &{" "}
               <span className="text-primary whitespace-nowrap">Bill Payment App</span>
             </h1>
 
-            <p className="text-xl text-slate-200 max-w-lg leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-400 max-w-lg leading-relaxed">
               Experience seamless transactions, exciting rewards, and unmatched convenience.
               Pay bills, recharge, and earn cashback - all in one powerful app.
             </p>

@@ -46,12 +46,12 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-12 md:py-24 relative overflow-hidden bg-slate-950/50">
+    <section id="services" className="py-12 md:py-16 relative overflow-hidden bg-slate-950/50">
       {/* Background Decorative Mesh / Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container max-w-6xl mx-auto px-4 relative z-10">
         {/* Top Row: Smartphone + Heading */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
           {/* Left: Smartphone - Static Position, Animated Content */}
@@ -75,7 +75,7 @@ const ServicesSection = () => {
         </div>
 
         {/* Service Cards Grid - Centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {services.map((service, index) => (
             <div
@@ -85,8 +85,8 @@ const ServicesSection = () => {
               <Card
                 className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
               >
-                <CardContent className="p-5 flex flex-row sm:flex-col items-center sm:items-center text-left sm:text-center gap-4 sm:gap-2">
-                  <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 sm:mb-4 flex items-center justify-center">
+                <CardContent className="p-6 flex flex-row sm:flex-col items-center sm:items-center text-left sm:text-center gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 sm:mb-4 flex items-center justify-center p-2 rounded-xl bg-primary/5 group-hover:bg-primary/10 transition-colors">
                     <img
                       src={service.icon}
                       alt={service.title}
@@ -94,10 +94,10 @@ const ServicesSection = () => {
                     />
                   </div>
                   <div className="flex flex-col">
-                    <h3 className="text-lg font-bold text-white mb-1 sm:mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-primary transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-slate-400 leading-relaxed">
+                    <p className="text-sm text-muted-foreground leading-relaxed">
                       {service.description}
                     </p>
                   </div>

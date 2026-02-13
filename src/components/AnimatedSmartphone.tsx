@@ -62,7 +62,9 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                                         className="w-11 h-11 md:w-14 md:h-14 object-contain drop-shadow-xl"
                                     />
                                     {/* Paid Stamp Animation */}
-                                    <motion.div
+                                    <motion.img
+                                        src={`${import.meta.env.BASE_URL}paid.webp`}
+                                        alt="Paid"
                                         initial={{ opacity: 0, scale: 2, rotate: -45 }}
                                         animate={{ opacity: 1, scale: 1, rotate: -12 }}
                                         transition={{
@@ -71,10 +73,8 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                                             stiffness: 300,
                                             damping: 20,
                                         }}
-                                        className="absolute -top-1 -right-4 md:-top-2 md:-right-6 px-1.5 py-0.5 bg-green-600 text-white text-[8px] md:text-[10px] font-black uppercase tracking-widest border border-white shadow-lg rounded-sm transform rotate-[-12deg]"
-                                    >
-                                        Paid
-                                    </motion.div>
+                                        className="absolute -top-4 -right-8 w-12 h-auto md:w-16 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:drop-shadow-[0_15px_25px_rgba(0,0,0,0.7)] transform rotate-[-12deg]"
+                                    />
                                 </div>
                                 <motion.p
                                     initial={{ opacity: 0 }}

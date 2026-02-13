@@ -18,7 +18,6 @@ const partners = [
     { name: "Indian Oil", domain: "iocl.com" },
     { name: "DishTV", domain: "dishtv.in" },
     { name: "SunDirect", domain: "sundirect.in" },
-    { name: "DistroTV", domain: "distro.tv" },
     { name: "Myntra", domain: "myntra.com" },
     { name: "Oven Story", domain: "ovenstory.in" },
     { name: "FanCode", domain: "fancode.com" },
@@ -31,8 +30,8 @@ const PartnersSection = () => {
     const isMobile = useIsMobile();
 
     return (
-        <section className="py-12 bg-muted/30 border-y border-border overflow-hidden">
-            <div className="container mx-auto px-4">
+        <section className="py-12 md:py-16 bg-muted/30 border-y border-border overflow-hidden">
+            <div className="container max-w-6xl mx-auto px-4">
                 <p className="text-center text-sm font-medium text-muted-foreground mb-8 uppercase tracking-widest">
                     Trusted by leading partners
                 </p>
@@ -45,7 +44,7 @@ const PartnersSection = () => {
                                 <img
                                     src={`https://img.logo.dev/${partner.domain}?token=${API_KEY}`}
                                     alt={partner.name}
-                                    className="h-full w-auto object-contain"
+                                    className="h-full w-auto object-contain rounded-full bg-white p-1"
                                     onError={(e) => {
                                         e.currentTarget.style.display = 'none';
                                     }}

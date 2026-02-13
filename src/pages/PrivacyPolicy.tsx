@@ -7,7 +7,7 @@ const PrivacyPolicy = () => {
         <div className="min-h-screen bg-background text-foreground selection:bg-primary/30 dark">
             <Header />
             <main className="pt-24 pb-16">
-                <div className="container mx-auto px-4">
+                <div className="container max-w-6xl mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
                                     <div className="bg-secondary/20 p-6 rounded-2xl border border-white/5">
                                         <h3 className="text-lg font-semibold mb-4 text-foreground/90">Personal Data</h3>
                                         <p className="text-muted-foreground text-sm mb-4">While using our Service, we may collect:</p>
-                                        <ul className="list-disc list-inside text-muted-foreground space-y-2 text-sm">
+                                        <ul className="list-disc ml-6 text-muted-foreground space-y-2 text-sm">
                                             <li>Email address</li>
                                             <li>First name and last name</li>
                                             <li>Phone number</li>

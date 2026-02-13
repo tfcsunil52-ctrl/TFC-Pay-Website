@@ -50,6 +50,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "About us", href: "/about-us" },
+  { label: "Contact Us", href: "/contact" },
   { label: "FAQ's", href: "/faq" },
   { label: "Terms & Conditions", href: "/terms-conditions" },
   { label: "Privacy Policy", href: "/privacy-policy" },
@@ -67,8 +68,9 @@ const socialLinks = [
 const Footer = () => {
   return (
     <footer className="bg-card border-t border-border pt-16 pb-8">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+          {/* 1. Brand & Contact */}
           {/* 1. Brand & Contact */}
           <div className="space-y-6">
             <div className="flex items-center">
@@ -77,7 +79,7 @@ const Footer = () => {
               }} />
             </div>
             <div>
-              <h3 className="text-lg font-bold text-foreground mb-2">Smart Desh ka, Smart App</h3>
+              <h3 className="text-lg font-bold text-foreground mb-4">Smart Desh ka, Smart App</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Seamless payments, instant recharges, and rewarding experiences.
               </p>
@@ -104,7 +106,7 @@ const Footer = () => {
 
           {/* 2. Services */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-6">Services</h3>
+            <h3 className="text-sm font-bold text-foreground mb-6 uppercase tracking-widest">Services</h3>
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
@@ -118,7 +120,7 @@ const Footer = () => {
 
           {/* 3. Company */}
           <div>
-            <h3 className="text-lg font-bold text-foreground mb-6">Company</h3>
+            <h3 className="text-sm font-bold text-foreground mb-6 uppercase tracking-widest">Company</h3>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
                 <li key={link.label}>
@@ -132,7 +134,7 @@ const Footer = () => {
 
           {/* 4. Newsletter & Socials */}
           <div className="space-y-6">
-            <h3 className="text-lg font-bold text-foreground mb-4">Subscribe Newsletter</h3>
+            <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Subscribe Newsletter</h3>
             <p className="text-sm text-muted-foreground">
               Be the first to receive all latest updates in your inbox.
             </p>

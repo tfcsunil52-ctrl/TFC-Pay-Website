@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Share2, Download, IndianRupee, ArrowRight, Smartphone } from "lucide-react";
+import { Share2, Download, IndianRupee, ArrowRight, Smartphone, ChevronRight } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -33,51 +33,89 @@ const steps = [
 
 const ReferSection = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-12 md:py-16 relative overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="container mx-auto px-4"
+        className="container max-w-6xl mx-auto px-4"
       >
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">
             <Share2 className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary font-medium">REFER & EARN</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Earn <span className="text-primary">₹100</span> Per Referral
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Invite your friends to TFCPAY and earn rewards together. It's a win-win!
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 relative mt-12">
-          {/* Connection line */}
-          <div className="hidden md:block absolute top-[55%] -translate-y-1/2 left-0 w-full h-1 bg-secondary overflow-hidden">
-            <div className="absolute inset-0 animate-shimmer" />
+        <div className="grid md:grid-cols-3 gap-12 relative mt-16">
+          {/* Moving Arrows Connections */}
+          <div className="hidden md:block absolute top-[50%] left-0 w-full pointer-events-none z-20">
+            {/* First Arrow Set (Between Card 1 and 2) */}
+            <div className="absolute left-[32.5%] -translate-x-1/2 flex -space-x-5 items-center justify-center w-[100px]">
+              {[...Array(5)].map((_, i) => (
+                <motion.div
+                  key={`arrow-1-${i}`}
+                  animate={{
+                    opacity: [0.2, 1, 0.2],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    delay: i * 0.4, // Staggered for wave effect
+                    ease: "easeInOut",
+                  }}
+                >
+                  <ChevronRight className="w-8 h-8 text-primary/80" strokeWidth={1} />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Second Arrow Set (Between Card 2 and 3) */}
+            <div className="absolute left-[67.5%] -translate-x-1/2 flex -space-x-5 items-center justify-center w-[100px]">
+              {[...Array(5)].map((_, i) => (
+                <motion.div
+                  key={`arrow-2-${i}`}
+                  animate={{
+                    opacity: [0.2, 1, 0.2],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    delay: i * 0.4,
+                    ease: "easeInOut",
+                  }}
+                >
+                  <ChevronRight className="w-8 h-8 text-primary/80" strokeWidth={1} />
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           {steps.map((step, index) => (
-            <div key={index} className="relative group">
+            <div key={index} className="relative group flex flex-col items-center">
               {/* Big dull number above card */}
               <div className="absolute -top-16 left-1/2 -translate-x-1/2 text-9xl font-black text-foreground/5 select-none z-0 transition-all duration-300 group-hover:text-primary/10 group-hover:-translate-y-2">
                 {step.step}
               </div>
 
               <Card
-                className="bg-card border-border hover:border-primary/50 transition-all duration-300 relative z-10 mt-8"
+                className="bg-card border-border hover:border-primary/50 transition-all duration-300 relative z-10 mt-8 flex-1 max-w-[320px] w-full"
               >
                 <CardContent className="p-8 text-center pt-8">
                   <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
                     <step.icon className="w-10 h-10 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>

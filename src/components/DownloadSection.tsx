@@ -5,8 +5,8 @@ import { QrCode, Smartphone } from "lucide-react";
 
 const DownloadSection = () => {
   return (
-    <section className="pt-8 pb-12 md:pt-12 md:pb-20 relative">
-      <div className="container mx-auto px-4">
+    <section className="py-12 md:py-16 relative">
+      <div className="container max-w-6xl mx-auto px-4">
         <Card className="relative bg-slate-900 border-primary/30 overflow-hidden">
           {/* Background Image with Overlay */}
           <div
@@ -34,11 +34,11 @@ const DownloadSection = () => {
                   <span className="text-sm text-primary font-medium">DOWNLOAD NOW</span>
                 </div>
 
-                <h2 className="text-2xl md:text-4xl font-bold text-foreground">
+                <h2 className="text-3xl md:text-5xl font-bold text-foreground leading-tight">
                   Get the <span className="text-primary">Cashback Wala App</span>
                 </h2>
 
-                <p className="text-muted-foreground text-lg">
+                <p className="text-lg md:text-xl text-muted-foreground">
                   Scan the QR code or click the buttons below to download TFCPAY and start earning cashback today!
                 </p>
 
