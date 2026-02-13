@@ -102,13 +102,13 @@ const PremiumSection = () => {
                             </div>
                           </div>
 
-                          {/* Bottom: Features in a row - Centered */}
+                          {/* Bottom: Features - Stacked on Mobile, Row on Desktop */}
                           <div className="w-full">
-                            <ul className={`flex flex-row items-center gap-4 ${(index === 0 || index === 1) ? 'justify-between' : 'justify-center md:gap-x-12'}`}>
+                            <ul className={`flex flex-col md:flex-row items-center gap-3 md:gap-4 ${(index === 0 || index === 1) ? 'md:justify-between' : 'md:justify-center md:gap-x-12'}`}>
                               {service.features.map((feature, idx) => (
-                                <li key={idx} className="flex items-center gap-2 py-1 px-3 rounded-full bg-secondary/20 hover:bg-secondary/40 transition-all">
+                                <li key={idx} className="flex items-center gap-2 py-1.5 px-4 rounded-full bg-secondary/20 hover:bg-secondary/40 transition-all w-full md:w-auto justify-center md:justify-start">
                                   <CheckCircle className="w-4 h-4 text-primary flex-shrink-0" />
-                                  <span className="text-foreground text-xs md:text-sm font-semibold whitespace-nowrap">{feature}</span>
+                                  <span className="text-foreground text-sm font-semibold text-center md:text-left">{feature}</span>
                                 </li>
                               ))}
                             </ul>
