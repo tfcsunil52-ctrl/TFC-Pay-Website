@@ -63,7 +63,7 @@ const PremiumSection = () => {
                       marginTop: isMobile ? '0' : (index > 0 ? '2rem' : '0'),
                     }}
                   >
-                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[450px] md:min-h-[400px] flex flex-col justify-center relative">
+                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[380px] md:min-h-[350px] flex flex-col justify-center relative">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-no-repeat opacity-30"
@@ -74,7 +74,7 @@ const PremiumSection = () => {
                         }}
                       />
 
-                      <CardContent className="p-4 md:p-8 flex flex-col items-center justify-center relative z-10 w-full">
+                      <CardContent className="p-4 md:p-6 flex flex-col items-center justify-center relative z-10 w-full">
                         {/* Wrapper to constrain width of both top content and pointers to the same group width */}
                         <div className="flex flex-col items-center gap-6 w-full max-w-fit">
                           {/* Top: Icon and Text side-by-side (alternating) */}
