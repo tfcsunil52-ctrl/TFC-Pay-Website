@@ -28,7 +28,7 @@ const PremiumSection = () => {
 
   return (
     <section id="premium" className="py-12 md:py-16 relative bg-background">
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <div className="relative pb-10">
           {/* HEADING - Sticky (Desktop Only) */}
           <div className="hidden md:block absolute top-0 left-0 right-0 h-[calc(100%-50vh)] pointer-events-none z-50">

@@ -6,7 +6,7 @@ import { QrCode, Smartphone } from "lucide-react";
 const DownloadSection = () => {
   return (
     <section className="py-12 md:py-16 relative">
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <Card className="relative bg-slate-900 border-primary/30 overflow-hidden">
           {/* Background Image with Overlay */}
           <div

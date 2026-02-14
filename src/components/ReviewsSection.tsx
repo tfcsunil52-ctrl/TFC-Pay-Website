@@ -29,7 +29,7 @@ const ReviewsSection = () => {
     <section id="reviews" className="py-12 md:py-16 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
 
-      <div className="container max-w-7xl mx-auto px-4">
+      <div className="container max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

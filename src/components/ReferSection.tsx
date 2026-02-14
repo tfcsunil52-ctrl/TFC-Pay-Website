@@ -35,7 +35,7 @@ const ReferSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="container max-w-7xl mx-auto px-4"
+        className="container max-w-6xl mx-auto px-4"
       >
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full border border-primary/20 mb-6">

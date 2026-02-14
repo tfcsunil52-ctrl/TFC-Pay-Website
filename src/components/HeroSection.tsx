@@ -8,7 +8,7 @@ const HeroSection = () => {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container max-w-7xl mx-auto px-4 relative z-10">
+      <div className="container max-w-6xl mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <motion.div
@@ -27,7 +27,7 @@ const HeroSection = () => {
               <span className="text-primary sm:whitespace-nowrap">Bill Payment App</span>
             </h1>
 
-            <p className="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-400 max-w-lg leading-relaxed">
               Experience seamless transactions, exciting rewards, and unmatched convenience. Pay bills, recharge, and earn cashback - all in one powerful app.
             </p>
 
