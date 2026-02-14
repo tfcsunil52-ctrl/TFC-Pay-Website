@@ -142,14 +142,40 @@ const Header = () => {
               <Menu className="w-6 h-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-background border-border overflow-y-auto">
-            <nav className="flex flex-col gap-4 mt-8">
-              <div className="space-y-4">
-                <p className="text-xs font-bold text-primary uppercase tracking-wider">Our Solutions</p>
+          <SheetContent side="right" className="bg-zinc-950 border-zinc-800 overflow-y-auto w-[85%] sm:w-[400px] p-6 [&>button]:text-white [&>button]:opacity-100">
+            <div className="flex flex-col gap-8 mt-4">
+              {/* Logo in Side Menu */}
+              <div className="pb-4 border-b border-zinc-800">
+                <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-8 w-auto" />
+              </div>
+
+              {/* Navigation Links */}
+              <nav className="flex flex-col gap-2">
+                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-2 opacity-70">Main Menu</p>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "flex items-center justify-between py-3 px-4 rounded-xl text-base font-medium transition-all duration-300",
+                      location.pathname === link.href
+                        ? "bg-primary/10 text-primary border border-primary/20"
+                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Solutions Accordion-like list */}
+              <div className="space-y-6">
+                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-2 opacity-70">Solutions</p>
                 {solutions.map((category) => (
-                  <div key={category.title} className="space-y-2 pl-2">
-                    <p className="text-sm font-semibold text-foreground">{category.title}</p>
-                    <div className="grid gap-2 pl-2">
+                  <div key={category.title} className="space-y-3">
+                    <p className="text-sm font-bold text-white pl-4">{category.title}</p>
+                    <div className="grid gap-1">
                       {category.items.map((item) => (
                         <button
                           key={item.title}
@@ -157,10 +183,12 @@ const Header = () => {
                             setIsOpen(false);
                             handleSolutionClick(e, category.title);
                           }}
-                          className="flex items-center gap-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                          className="flex items-center gap-4 py-3 px-4 rounded-xl text-sm text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left group"
                         >
-                          <item.icon className="w-4 h-4" />
-                          {item.title}
+                          <div className="p-2 rounded-lg bg-zinc-900 text-slate-500 group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                            <item.icon className="w-4 h-4" />
+                          </div>
+                          <span className="font-medium">{item.title}</span>
                         </button>
                       ))}
                     </div>
@@ -168,29 +196,23 @@ const Header = () => {
                 ))}
               </div>
 
-              <div className="pt-4 space-y-4 border-t border-border">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    to={link.href}
-                    onClick={() => setIsOpen(false)}
-                    className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+              {/* Actions */}
+              <div className="pt-6 border-t border-zinc-800 mt-auto flex flex-col gap-4">
+                <Button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsDownloadOpen(true);
+                  }}
+                  className="w-full h-12 bg-primary hover:bg-primary/90 text-black font-bold rounded-xl shadow-lg shadow-primary/20 gap-2"
+                >
+                  <Download className="w-5 h-5" />
+                  Download App
+                </Button>
+                <p className="text-center text-[10px] text-slate-600">
+                  © 2026 TFCPAY. All rights reserved.
+                </p>
               </div>
-              <Button
-                onClick={() => {
-                  setIsOpen(false);
-                  setIsDownloadOpen(true);
-                }}
-                className="mt-4 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                <Download className="w-4 h-4" />
-                Download App
-              </Button>
-            </nav>
+            </div>
           </SheetContent>
         </Sheet>
       </div>
