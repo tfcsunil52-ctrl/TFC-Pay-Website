@@ -115,8 +115,14 @@ const Footer = () => {
                 <li key={link.label}>
                   <Link
                     to="/"
-                    state={{ scrollTo: link.href, openDownload: true }}
+                    state={{ openDownload: true }}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                    onClick={(e) => {
+                      if (window.location.hash === '#/' || window.location.pathname === '/' || window.location.pathname === '/TFC-Pay-Website/') {
+                        e.preventDefault();
+                        window.dispatchEvent(new CustomEvent('open-download-popup'));
+                      }
+                    }}
                   >
                     {link.label}
                   </Link>

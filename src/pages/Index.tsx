@@ -16,16 +16,14 @@ const Index = () => {
   const location = useLocation();
 
   useEffect(() => {
+    // 1. Handle cross-page navigation with state
     if (location.state?.scrollTo) {
       const element = document.querySelector(location.state.scrollTo);
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
       }
-    }
-
-    // Check if we should open the download popup
-    if (location.state?.openDownload && typeof window !== 'undefined') {
-      // Small delay to ensure the component is mounted
+    } else if (location.state?.openDownload) {
+      // If we came from another page wanting to open download, just trigger it
       setTimeout(() => {
         window.dispatchEvent(new CustomEvent('open-download-popup'));
       }, 100);
