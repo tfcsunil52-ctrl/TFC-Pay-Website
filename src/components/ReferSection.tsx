@@ -102,13 +102,13 @@ const ReferSection = () => {
               </div>
 
               <Card
-                className={`bg-card border-border hover:border-primary/50 transition-all duration-300 relative z-10 mt-8 flex-1 max-w-[320px] md:max-w-none w-full ${index === 0 ? "md:mt-8 -mt-4 mb-2" : ""}`}
+                className={`bg-card border-border hover:border-primary/50 transition-all duration-300 relative z-10 mt-8 flex-1 max-w-[320px] md:max-w-none w-full ${index === 0 ? "md:mt-8 -mt-10 mb-0" : ""}`}
               >
-                <CardContent className={`p-6 md:p-8 text-center ${index === 0 ? "pt-2 md:pt-8" : "pt-8"}`}>
-                  <div className={`flex items-center justify-center mx-auto bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors ${index === 0 ? "w-14 h-14 mb-4 md:w-20 md:h-20 md:mb-6" : "w-16 h-16 mb-6 md:w-20 md:h-20"}`}>
-                    <step.icon className={`text-primary ${index === 0 ? "w-7 h-7 md:w-10 md:h-10" : "w-8 h-8 md:w-10 md:h-10"}`} />
+                <CardContent className={`p-6 md:p-8 text-center ${index === 0 ? "pt-2 pb-4 md:pt-8 md:pb-8" : "pt-8"}`}>
+                  <div className={`flex items-center justify-center mx-auto bg-primary/10 rounded-full group-hover:bg-primary/20 transition-colors ${index === 0 ? "w-20 h-20 mb-3 md:w-20 md:h-20 md:mb-6" : "w-16 h-16 mb-6 md:w-20 md:h-20"}`}>
+                    <step.icon className={`text-primary ${index === 0 ? "w-10 h-10 md:w-10 md:h-10" : "w-8 h-8 md:w-10 md:h-10"}`} />
                   </div>
-                  <h3 className="text-lg md:text-2xl font-bold text-foreground mb-3">
+                  <h3 className={`font-bold text-foreground ${index === 0 ? "text-xl mb-1 md:text-2xl md:mb-3" : "text-lg md:text-2xl mb-3"}`}>
                     {step.title}
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -119,7 +119,7 @@ const ReferSection = () => {
 
               {/* Mobile Arrow (Vertical) */}
               {index < steps.length - 1 && (
-                <div className="md:hidden mt-2 mb-0 text-primary/40 flex flex-col items-center -space-y-3">
+                <div className={`md:hidden mb-0 text-primary/40 flex flex-col items-center -space-y-4 ${index === 0 ? "-mt-4" : "mt-4"}`}>
                   {[...Array(3)].map((_, i) => (
                     <motion.div
                       key={`mobile-arrow-${index}-${i}`}
