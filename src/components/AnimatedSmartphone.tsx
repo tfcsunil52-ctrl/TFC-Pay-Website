@@ -37,15 +37,17 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
 
                 {/* Animated Phone Container */}
                 <div className="relative z-10 w-full h-full flex items-center justify-center">
-                    {/* Animation Container (Behind Phone) */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center z-0 pt-32 md:pt-40 pr-14 md:pr-20">
-                        {/* Cutout Patch Background */}
+                    {/* Bottom Layer (Background) */}
+                    <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
                         <img
-                            src={`${import.meta.env.BASE_URL}cutout-patch.webp`}
+                            src={`${import.meta.env.BASE_URL}bottom.webp`}
                             alt=""
-                            className="absolute w-48 h-48 md:w-52 md:h-52 object-contain"
-                            style={{ transform: "translate(0px, -10px)" }}
+                            className="w-full h-auto max-h-full object-contain"
                         />
+                    </div>
+
+                    {/* Animation Container (Middle Layer) */}
+                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pt-32 md:pt-40 pr-14 md:pr-20">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIconIndex}
@@ -88,12 +90,12 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                         </AnimatePresence>
                     </div>
 
-                    {/* Phone Frame (Foreground) */}
-                    <div className="relative z-10 pointer-events-none w-full h-full flex items-center justify-center">
+                    {/* Top Layer (Foreground) */}
+                    <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
                         <img
-                            src={`${import.meta.env.BASE_URL}smartphone - Copy.webp`}
+                            src={`${import.meta.env.BASE_URL}top.webp`}
                             alt="TFC Pay App Interface"
-                            className="w-full h-auto max-h-full object-contain drop-shadow-2xl"
+                            className="w-full h-auto max-h-full object-contain"
                         />
                     </div>
                 </div>
