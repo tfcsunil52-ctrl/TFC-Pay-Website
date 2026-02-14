@@ -2,6 +2,7 @@ import { Facebook, Instagram, Linkedin, Send, Mail, Phone, MapPin } from "lucide
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { TRIGGER_DOWNLOAD_DIALOG } from "./DownloadDialog";
 
 const XLogo = ({ className }: { className?: string }) => (
   <svg
@@ -113,13 +114,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
-                  <Link
-                    to="/"
-                    state={{ scrollTo: link.href }}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                  <button
+                    onClick={() => window.dispatchEvent(new CustomEvent(TRIGGER_DOWNLOAD_DIALOG))}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer text-left"
                   >
                     {link.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>

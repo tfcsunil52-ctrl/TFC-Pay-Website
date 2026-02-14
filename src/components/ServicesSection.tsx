@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSmartphone from "./AnimatedSmartphone";
+import { TRIGGER_DOWNLOAD_DIALOG } from "./DownloadDialog";
 
 const services = [
   {
@@ -116,7 +117,8 @@ const ServicesSection = () => {
               className="h-full scroll-mt-24"
             >
               <Card
-                className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
+                onClick={() => window.dispatchEvent(new CustomEvent(TRIGGER_DOWNLOAD_DIALOG))}
+                className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm cursor-pointer"
               >
                 <CardContent className="p-6 flex flex-row sm:flex-col items-center sm:items-center text-left sm:text-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 sm:mb-4 flex items-center justify-center p-2 rounded-xl bg-primary/5 group-hover:bg-primary/10 transition-colors">

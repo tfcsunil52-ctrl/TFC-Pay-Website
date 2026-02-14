@@ -13,6 +13,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import { TRIGGER_DOWNLOAD_DIALOG } from "./DownloadDialog";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -162,7 +163,10 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
-              <Button className="mt-4 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button
+                onClick={() => window.dispatchEvent(new CustomEvent(TRIGGER_DOWNLOAD_DIALOG))}
+                className="mt-4 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
                 <Download className="w-4 h-4" />
                 Download App
               </Button>
