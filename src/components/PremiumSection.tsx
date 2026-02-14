@@ -63,7 +63,7 @@ const PremiumSection = () => {
                       marginTop: isMobile ? '0' : (index > 0 ? '2rem' : '0'),
                     }}
                   >
-                    <Card className="w-full bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[380px] md:min-h-[350px] flex flex-col justify-center relative">
+                    <Card className="w-full max-w-6xl mx-auto bg-gradient-to-br from-card to-primary/10 border-primary/20 shadow-2xl overflow-hidden min-h-[380px] md:min-h-[350px] flex flex-col justify-center relative">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-no-repeat opacity-30"
