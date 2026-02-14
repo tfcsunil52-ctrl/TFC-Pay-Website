@@ -13,6 +13,8 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
+import DownloadPopup from "./DownloadPopup";
+import ContactPopup from "./ContactPopup";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -42,8 +44,19 @@ const solutions = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+
+  const handleSolutionClick = (e: React.MouseEvent, category: string) => {
+    e.preventDefault();
+    if (category === "Consumer Solutions") {
+      setIsDownloadOpen(true);
+    } else if (category === "Business Solutions") {
+      setIsContactOpen(true);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-md border-b border-border">
@@ -82,6 +95,7 @@ const Header = () => {
                             <NavigationMenuLink asChild key={item.title}>
                               <a
                                 href="#"
+                                onClick={(e) => handleSolutionClick(e, category.title)}
                                 className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted focus:bg-muted"
                               >
                                 <div className="flex items-start gap-3">
@@ -139,6 +153,10 @@ const Header = () => {
                       {category.items.map((item) => (
                         <button
                           key={item.title}
+                          onClick={(e) => {
+                            setIsOpen(false);
+                            handleSolutionClick(e, category.title);
+                          }}
                           className="flex items-center gap-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
                           <item.icon className="w-4 h-4" />
@@ -162,7 +180,13 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
-              <Button className="mt-4 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button
+                onClick={() => {
+                  setIsOpen(false);
+                  setIsDownloadOpen(true);
+                }}
+                className="mt-4 gap-2 bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
                 <Download className="w-4 h-4" />
                 Download App
               </Button>
@@ -170,6 +194,8 @@ const Header = () => {
           </SheetContent>
         </Sheet>
       </div>
+      <DownloadPopup isOpen={isDownloadOpen} onOpenChange={setIsDownloadOpen} />
+      <ContactPopup isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
     </header>
   );
 };
