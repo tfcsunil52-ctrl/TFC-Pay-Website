@@ -46,6 +46,9 @@ const serviceLinks = [
   { label: "Landline", href: "#Landline" },
   { label: "Fastag", href: "#Fastag" },
   { label: "Broadband", href: "#Broadband" },
+  { label: "Water Bill", href: "#water" },
+  { label: "Credit Card", href: "#CreditCard" },
+  { label: "Rent Payment", href: "#Rent" },
 ];
 
 const companyLinks = [
@@ -110,9 +113,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <Link
+                    to="/"
+                    state={{ scrollTo: link.href }}
+                    className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                  >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

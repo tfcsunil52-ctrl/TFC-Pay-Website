@@ -3,44 +3,76 @@ import AnimatedSmartphone from "./AnimatedSmartphone";
 
 const services = [
   {
+    id: "Mobile",
     icon: `${import.meta.env.BASE_URL}Icons/mobile-recharge.webp`,
     title: "Mobile Prepaid",
     description: "Instant recharge for all operators with exciting cashback offers",
   },
   {
+    id: "dth",
     icon: `${import.meta.env.BASE_URL}Icons/dth-recharge.webp`,
     title: "DTH Recharge",
     description: "Recharge your DTH connection instantly with best deals",
   },
   {
+    id: "Cable",
+    icon: `${import.meta.env.BASE_URL}Icons/cable-tv.webp`,
+    title: "Cable TV",
+    description: "Pay your cable TV bills across all major service providers",
+  },
+  {
+    id: "Electricity",
     icon: `${import.meta.env.BASE_URL}Icons/electricity-bill.webp`,
     title: "Electricity",
     description: "Pay your electricity bills quickly and earn rewards",
   },
   {
-    icon: `${import.meta.env.BASE_URL}Icons/fastag.webp`,
-    title: "Fastag",
-    description: "Recharge your Fastag for hassle-free toll payments",
-  },
-  {
+    id: "gas",
     icon: `${import.meta.env.BASE_URL}Icons/lpg-cylinder.webp`,
     title: "Gas Cylinder",
     description: "Book and pay for LPG cylinder with ease",
   },
   {
+    id: "pipe",
+    icon: `${import.meta.env.BASE_URL}Icons/piped-gas.webp`,
+    title: "Piped Gas",
+    description: "Pay your piped gas bills securely and instantly",
+  },
+  {
+    id: "water",
     icon: `${import.meta.env.BASE_URL}Icons/water-bill.webp`,
     title: "Water Bill",
     description: "Pay water bills for all major providers",
   },
   {
+    id: "Broadband",
     icon: `${import.meta.env.BASE_URL}Icons/wifi.webp`,
     title: "Broadband",
     description: "Pay broadband bills and stay connected",
   },
   {
+    id: "Landline",
     icon: `${import.meta.env.BASE_URL}Icons/landline.webp`,
     title: "Landline",
     description: "Pay landline bills quickly and securely",
+  },
+  {
+    id: "Fastag",
+    icon: `${import.meta.env.BASE_URL}Icons/fastag.webp`,
+    title: "Fastag",
+    description: "Recharge your Fastag for hassle-free toll payments",
+  },
+  {
+    id: "CreditCard",
+    icon: `${import.meta.env.BASE_URL}Icons/credit-card.webp`,
+    title: "Credit Card",
+    description: "Pay your credit card bills instantly and securely",
+  },
+  {
+    id: "Rent",
+    icon: `${import.meta.env.BASE_URL}Icons/rent.webp`,
+    title: "Rent Payment",
+    description: "Pay your house rent using credit cards and earn rewards",
   },
 ];
 
@@ -80,7 +112,8 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="h-full"
+              id={service.id}
+              className="h-full scroll-mt-24"
             >
               <Card
                 className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
