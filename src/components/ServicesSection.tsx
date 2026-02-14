@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSmartphone from "./AnimatedSmartphone";
 import DownloadPopup from "./DownloadPopup";
 
@@ -116,36 +115,30 @@ const ServicesSection = () => {
           </div>
         </div>
 
-        {/* Service Cards Grid - Centered */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* Service Items Grid - Compact & Left Aligned */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-y-8 gap-x-4 md:gap-x-8">
           {services.map((service, index) => (
             <div
               key={index}
               id={service.id}
-              className="h-full scroll-mt-24 cursor-pointer"
+              className="scroll-mt-24 cursor-pointer group flex items-start gap-4 p-2 rounded-2xl transition-all duration-300 hover:bg-white/5"
               onClick={() => setIsPopupOpen(true)}
             >
-              <Card
-                className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
-              >
-                <CardContent className="p-6 flex flex-row sm:flex-col items-center sm:items-center text-left sm:text-center gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 sm:mb-4 flex items-center justify-center p-2 rounded-xl bg-primary/5 group-hover:bg-primary/10 transition-colors">
-                    <img
-                      src={service.icon}
-                      alt={service.title}
-                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="flex flex-col">
-                    <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-primary transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {service.description}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center p-2 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                <img
+                  src={service.icon}
+                  alt={service.title}
+                  className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                />
+              </div>
+              <div className="flex flex-col justify-start">
+                <h3 className="text-lg font-bold text-white group-hover:text-primary transition-colors leading-tight mb-1">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-slate-400 leading-snug">
+                  {service.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>
