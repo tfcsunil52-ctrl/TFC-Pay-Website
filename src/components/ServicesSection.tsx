@@ -106,7 +106,7 @@ const ServicesSection = () => {
             <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold uppercase tracking-wider self-start">
               Explore Features
             </div>
-            <h2 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
+            <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
               One App, <br />
               <span className="text-primary">Limitless Possibilities.</span>
             </h2>
