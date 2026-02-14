@@ -22,8 +22,9 @@ const HeroSection = () => {
               <span className="text-sm text-primary font-semibold uppercase tracking-wider">India's Fastest Growing Payment App</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
-              Recharge & <span className="text-primary whitespace-nowrap">Bill Payment App</span>
+            <h1 className="text-5xl sm:text-6xl md:text-6xl xl:text-7xl font-bold text-white leading-[1.1] md:leading-tight">
+              Recharge & <br className="sm:hidden" />
+              <span className="text-primary sm:whitespace-nowrap">Bill Payment App</span>
             </h1>
 
             <p className="text-xl md:text-2xl text-slate-400 max-w-2xl leading-relaxed">
