@@ -22,12 +22,12 @@ const HeroSection = () => {
               <span className="text-xs md:text-sm text-primary font-semibold uppercase tracking-wider">India's Fastest Growing Payment App</span>
             </div>
 
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] md:leading-tight">
+            <h1 className="text-6xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] md:leading-tight">
               Recharge & <br className="hidden sm:block" />
               <span className="text-primary">Bill Payment App</span>
             </h1>
 
-            <p className="text-lg md:text-2xl text-slate-400 max-w-lg leading-relaxed px-0">
+            <p className="text-lg md:text-2xl text-slate-400 max-w-lg leading-relaxed text-left">
               Experience seamless transactions, exciting rewards, and unmatched convenience. Pay bills, recharge, and earn cashback - all in one powerful app.
             </p>
 

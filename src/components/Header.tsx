@@ -121,28 +121,30 @@ const Header = () => {
         </nav>
 
 
-        {/* Mobile Menu */}
+        {/* Mobile Menu Button */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon" className="text-primary hover:text-primary hover:bg-primary/10">
-              <Menu className="w-7 h-7" />
+            <Button variant="default" size="icon" className="bg-primary hover:bg-primary/90 text-black shadow-lg shadow-primary/20 rounded-xl">
+              <Menu className="w-6 h-6" />
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-zinc-950 border-zinc-800 text-white overflow-y-auto w-[85vw] sm:w-[400px]">
             <nav className="flex flex-col gap-4 mt-8">
               <div className="space-y-4">
-                <p className="text-xs font-bold text-primary uppercase tracking-wider">Our Solutions</p>
+                <p className="text-[10px] font-bold text-primary/60 uppercase tracking-[0.2em] mb-4">Our Solutions</p>
                 {solutions.map((category) => (
-                  <div key={category.title} className="space-y-2 pl-2">
-                    <p className="text-sm font-semibold text-foreground">{category.title}</p>
-                    <div className="grid gap-2 pl-2">
+                  <div key={category.title} className="space-y-3 mb-6">
+                    <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">{category.title}</p>
+                    <div className="grid gap-1">
                       {category.items.map((item) => (
                         <button
                           key={item.title}
-                          className="flex items-center gap-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                          className="flex items-center gap-4 py-3 px-3 rounded-xl text-zinc-300 hover:text-primary hover:bg-primary/5 transition-all active:scale-[0.98]"
                         >
-                          <item.icon className="w-4 h-4" />
-                          {item.title}
+                          <div className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-primary">
+                            <item.icon className="w-5 h-5" />
+                          </div>
+                          <span className="font-medium">{item.title}</span>
                         </button>
                       ))}
                     </div>
