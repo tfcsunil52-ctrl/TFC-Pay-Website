@@ -6,7 +6,6 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import ChatSupport from "./components/ChatSupport";
 import ScrollToTop from "./components/ScrollToTop";
-import DownloadDialog from "./components/DownloadDialog";
 
 // Lazy load pages to reduce initial bundle size
 const Index = lazy(() => import("./pages/Index"));
@@ -58,7 +57,6 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ChatSupport />
-      <DownloadDialog />
       <HashRouter>
         <ScrollToTop />
         <Suspense fallback={<PageLoader />}>

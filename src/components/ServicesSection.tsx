@@ -1,6 +1,7 @@
+import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import AnimatedSmartphone from "./AnimatedSmartphone";
-import { TRIGGER_DOWNLOAD_DIALOG } from "./DownloadDialog";
+import DownloadPopup from "./DownloadPopup";
 
 const services = [
   {
@@ -78,6 +79,14 @@ const services = [
 ];
 
 const ServicesSection = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  useEffect(() => {
+    const handleOpenPopup = () => setIsPopupOpen(true);
+    window.addEventListener('open-download-popup', handleOpenPopup);
+    return () => window.removeEventListener('open-download-popup', handleOpenPopup);
+  }, []);
+
   return (
     <section id="services" className="py-12 md:py-16 relative overflow-hidden bg-slate-950/50">
       {/* Background Decorative Mesh / Glows */}
@@ -114,11 +123,11 @@ const ServicesSection = () => {
             <div
               key={index}
               id={service.id}
-              className="h-full scroll-mt-24"
+              className="h-full scroll-mt-24 cursor-pointer"
+              onClick={() => setIsPopupOpen(true)}
             >
               <Card
-                onClick={() => window.dispatchEvent(new CustomEvent(TRIGGER_DOWNLOAD_DIALOG))}
-                className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm cursor-pointer"
+                className="group bg-slate-900/40 border-slate-800/60 hover:border-primary/40 hover:bg-slate-900/60 transition-all duration-300 h-full backdrop-blur-sm"
               >
                 <CardContent className="p-6 flex flex-row sm:flex-col items-center sm:items-center text-left sm:text-center gap-4">
                   <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 sm:mb-4 flex items-center justify-center p-2 rounded-xl bg-primary/5 group-hover:bg-primary/10 transition-colors">
@@ -142,9 +151,13 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
+
+      <DownloadPopup
+        isOpen={isPopupOpen}
+        onOpenChange={setIsPopupOpen}
+      />
     </section>
   );
 };
 
 export default ServicesSection;
-

@@ -22,6 +22,14 @@ const Index = () => {
         element.scrollIntoView({ behavior: "smooth" });
       }
     }
+
+    // Check if we should open the download popup
+    if (location.state?.openDownload && typeof window !== 'undefined') {
+      // Small delay to ensure the component is mounted
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('open-download-popup'));
+      }, 100);
+    }
   }, [location]);
 
   return (
