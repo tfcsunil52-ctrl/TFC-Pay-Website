@@ -50,7 +50,7 @@ const Header = () => {
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-6 md:h-8 w-auto object-contain" onError={(e) => {
+          <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-5 md:h-8 w-auto object-contain" onError={(e) => {
             e.currentTarget.style.display = 'none';
           }} />
         </Link>

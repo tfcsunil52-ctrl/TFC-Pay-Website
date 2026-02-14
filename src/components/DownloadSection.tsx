@@ -49,10 +49,12 @@ const DownloadSection = () => {
                       Google Play
                     </Button>
                   </a>
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto border-border text-foreground hover:bg-primary/5 hover:text-primary gap-2 py-6">
-                    <img src={`${import.meta.env.BASE_URL}app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
-                    App Store
-                  </Button>
+                  <a href="#" className="w-full sm:w-auto">
+                    <Button size="lg" variant="outline" className="w-full border-border text-foreground hover:bg-primary/5 hover:text-primary gap-2 py-6">
+                      <img src={`${import.meta.env.BASE_URL}app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
+                      App Store
+                    </Button>
+                  </a>
                 </div>
               </motion.div>
 
