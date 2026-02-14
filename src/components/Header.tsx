@@ -50,7 +50,7 @@ const Header = () => {
       <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-5 md:h-8 w-auto object-contain" onError={(e) => {
+          <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-8 w-auto object-contain" onError={(e) => {
             e.currentTarget.style.display = 'none';
           }} />
         </Link>
@@ -121,30 +121,28 @@ const Header = () => {
         </nav>
 
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="default" size="icon" className="bg-primary hover:bg-primary/90 text-black shadow-lg shadow-primary/20 rounded-xl">
+            <Button variant="ghost" size="icon">
               <Menu className="w-6 h-6" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-zinc-950 border-zinc-800 text-white overflow-y-auto w-[85vw] sm:w-[400px]">
+          <SheetContent side="right" className="bg-background border-border overflow-y-auto">
             <nav className="flex flex-col gap-4 mt-8">
               <div className="space-y-4">
-                <p className="text-[10px] font-bold text-primary/60 uppercase tracking-[0.2em] mb-4">Our Solutions</p>
+                <p className="text-xs font-bold text-primary uppercase tracking-wider">Our Solutions</p>
                 {solutions.map((category) => (
-                  <div key={category.title} className="space-y-3 mb-6">
-                    <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">{category.title}</p>
-                    <div className="grid gap-1">
+                  <div key={category.title} className="space-y-2 pl-2">
+                    <p className="text-sm font-semibold text-foreground">{category.title}</p>
+                    <div className="grid gap-2 pl-2">
                       {category.items.map((item) => (
                         <button
                           key={item.title}
-                          className="flex items-center gap-4 py-3 px-3 rounded-xl text-zinc-300 hover:text-primary hover:bg-primary/5 transition-all active:scale-[0.98]"
+                          className="flex items-center gap-3 py-2 text-sm text-muted-foreground hover:text-primary transition-colors"
                         >
-                          <div className="p-2 rounded-lg bg-zinc-900 border border-zinc-800 text-primary">
-                            <item.icon className="w-5 h-5" />
-                          </div>
-                          <span className="font-medium">{item.title}</span>
+                          <item.icon className="w-4 h-4" />
+                          {item.title}
                         </button>
                       ))}
                     </div>
@@ -152,13 +150,13 @@ const Header = () => {
                 ))}
               </div>
 
-              <div className="pt-4 space-y-4 border-t border-zinc-800">
+              <div className="pt-4 space-y-4 border-t border-border">
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-lg font-medium text-zinc-400 hover:text-primary transition-colors text-left"
+                    className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
                   >
                     {link.label}
                   </Link>
