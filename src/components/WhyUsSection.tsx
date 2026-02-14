@@ -35,7 +35,7 @@ const WhyUsSection = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
         viewport={{ once: true }}
-        className="container max-w-6xl mx-auto px-4"
+        className="container max-w-7xl mx-auto px-4"
       >
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">

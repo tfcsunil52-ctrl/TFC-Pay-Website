@@ -93,12 +93,12 @@ const ServicesSection = () => {
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="container max-w-6xl mx-auto px-4 relative z-10">
+      <div className="container max-w-7xl mx-auto px-4 relative z-10">
         {/* Top Row: Smartphone + Heading */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
           {/* Left: Smartphone - Static Position, Animated Content */}
           <div className="flex justify-center items-center">
-            <AnimatedSmartphone className="scale-90 md:scale-100" />
+            <AnimatedSmartphone className="scale-90 md:scale-105" />
           </div>
 
           {/* Right: Large Heading */}
@@ -106,11 +106,11 @@ const ServicesSection = () => {
             <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-semibold uppercase tracking-wider self-start">
               Explore Features
             </div>
-            <h2 className="text-4xl md:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight">
               One App, <br />
               <span className="text-primary">Limitless Possibilities.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-slate-400 leading-relaxed">
+            <p className="text-xl md:text-2xl text-slate-400 leading-relaxed max-w-2xl">
               TFC Pay streamlines your daily payments. From mobile recharges to utility bills, Experience lightning-fast transactions with military-grade security.
             </p>
           </div>

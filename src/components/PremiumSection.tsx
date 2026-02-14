@@ -28,13 +28,12 @@ const PremiumSection = () => {
 
   return (
     <section id="premium" className="py-12 md:py-16 relative bg-background">
-      <div className="container max-w-6xl mx-auto px-4">
-
+      <div className="container max-w-7xl mx-auto px-4">
         <div className="relative pb-10">
           {/* HEADING - Sticky (Desktop Only) */}
-          <div className="hidden md:block absolute top-0 left-0 right-0 h-[calc(100%-50vh)] pointer-events-none z-50">
+          <div className="hidden md:block absolute top-0 left-0 right-0 h-[calc(100%-30vh)] pointer-events-none z-50">
             <div className="sticky top-16 pointer-events-auto bg-background/95 backdrop-blur-sm text-center mb-12 pt-10 pb-8">
-              <h2 className="md:text-7xl font-bold text-foreground leading-tight flex flex-row items-center justify-center gap-3">
+              <h2 className="text-4xl md:text-6xl xl:text-7xl font-bold text-foreground leading-tight flex flex-row items-center justify-center gap-3">
                 <span>Exclusive</span>
                 <span className="text-primary">Premium</span>
                 <span>Features</span>
@@ -46,7 +45,7 @@ const PremiumSection = () => {
           <div className="relative z-10">
             {/* Title - Visible & Scrolling on Mobile, Invisible Spacer on Desktop */}
             <div className="text-center mb-8 md:mb-12 pt-0 md:pt-10 pb-6 md:pb-8 md:invisible">
-              <h2 className="text-4xl md:text-7xl font-bold text-foreground leading-tight flex flex-row flex-wrap items-center justify-center gap-x-3 gap-y-1">
+              <h2 className="text-4xl md:text-6xl xl:text-7xl font-bold text-foreground leading-tight flex flex-row flex-wrap items-center justify-center gap-x-3 gap-y-1">
                 <span>Exclusive</span>
                 <span className="text-primary">Premium</span>
                 <span>Features</span>
@@ -92,7 +91,7 @@ const PremiumSection = () => {
                             </div>
 
                             {/* Text Context */}
-                            <div className="lg:w-[500px] text-center lg:text-left">
+                            <div className="lg:w-1/2 text-center lg:text-left">
                               <h3 className="text-3xl md:text-5xl font-bold text-foreground mb-3 leading-tight tracking-tight">
                                 {service.title}
                               </h3>

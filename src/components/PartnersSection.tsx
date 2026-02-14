@@ -31,7 +31,7 @@ const PartnersSection = () => {
 
     return (
         <section className="py-12 md:py-16 bg-muted/30 border-y border-border overflow-hidden">
-            <div className="container max-w-6xl mx-auto px-4">
+            <div className="container max-w-7xl mx-auto px-4">
                 <p className="text-center text-sm font-medium text-muted-foreground mb-8 uppercase tracking-widest">
                     Trusted by leading partners
                 </p>

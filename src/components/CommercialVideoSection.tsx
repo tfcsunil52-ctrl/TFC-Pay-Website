@@ -58,7 +58,7 @@ const CommercialVideoSection = () => {
 
     return (
         <section className="py-12 md:py-16 relative">
-            <div className="container max-w-6xl mx-auto px-4">
+            <div className="container max-w-7xl mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/* Left - Content */}
                     <motion.div
