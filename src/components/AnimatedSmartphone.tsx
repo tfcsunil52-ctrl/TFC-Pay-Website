@@ -29,7 +29,7 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
     return (
         <div className={`relative ${className}`}>
             {/* Phone Wrapper with fixed size to ensure alignment */}
-            <div className="relative w-64 md:w-80 h-[500px] flex items-center justify-center">
+            <div className="relative w-56 sm:w-64 md:w-80 h-[400px] sm:h-[500px] flex items-center justify-center">
                 {/* Decorative elements */}
                 <div className="absolute inset-0 z-0">
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl opacity-50" />
@@ -47,7 +47,7 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                     </div>
 
                     {/* Animation Container (Middle Layer) */}
-                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pt-32 md:pt-40 pr-14 md:pr-20">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center z-10 pt-24 sm:pt-32 md:pt-40 pr-10 sm:pr-14 md:pr-20">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentIconIndex}

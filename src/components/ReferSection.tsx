@@ -50,11 +50,11 @@ const ReferSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 relative mt-16">
+        <div className="grid md:grid-cols-3 gap-16 md:gap-8 lg:gap-12 relative mt-24 md:mt-16">
           {/* Moving Arrows Connections */}
           <div className="hidden md:block absolute top-[50%] left-0 w-full pointer-events-none z-20">
             {/* First Arrow Set (Between Card 1 and 2) */}
-            <div className="absolute left-[32.5%] -translate-x-1/2 flex -space-x-5 items-center justify-center w-[100px]">
+            <div className="absolute left-[32.5%] -translate-x-1/2 flex -space-x-4 items-center justify-center w-[100px]">
               {[...Array(5)].map((_, i) => (
                 <motion.div
                   key={`arrow-1-${i}`}
@@ -64,17 +64,17 @@ const ReferSection = () => {
                   transition={{
                     duration: 1.5,
                     repeat: Infinity,
-                    delay: i * 0.4, // Staggered for wave effect
+                    delay: i * 0.4,
                     ease: "easeInOut",
                   }}
                 >
-                  <ChevronRight className="w-8 h-8 text-primary/80" strokeWidth={1} />
+                  <ChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-primary/80" strokeWidth={1} />
                 </motion.div>
               ))}
             </div>
 
             {/* Second Arrow Set (Between Card 2 and 3) */}
-            <div className="absolute left-[67.5%] -translate-x-1/2 flex -space-x-5 items-center justify-center w-[100px]">
+            <div className="absolute left-[67.5%] -translate-x-1/2 flex -space-x-4 items-center justify-center w-[100px]">
               {[...Array(5)].map((_, i) => (
                 <motion.div
                   key={`arrow-2-${i}`}
@@ -88,34 +88,49 @@ const ReferSection = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <ChevronRight className="w-8 h-8 text-primary/80" strokeWidth={1} />
+                  <ChevronRight className="w-6 h-6 lg:w-8 lg:h-8 text-primary/80" strokeWidth={1} />
                 </motion.div>
               ))}
             </div>
           </div>
 
           {steps.map((step, index) => (
-            <div key={index} className="relative group flex flex-col items-center">
-              {/* Big dull number above card */}
-              <div className="absolute -top-16 left-1/2 -translate-x-1/2 text-9xl font-black text-foreground/5 select-none z-0 transition-all duration-300 group-hover:text-primary/10 group-hover:-translate-y-2">
+            <div key={index} className="relative group flex flex-col items-center w-full px-2">
+              {/* Big dull number behind card - Responsive sizing */}
+              <div className="absolute -top-12 md:-top-16 left-1/2 -translate-x-1/2 text-7xl md:text-9xl font-black text-foreground/5 select-none z-0 transition-all duration-300 group-hover:text-primary/10 group-hover:-translate-y-2">
                 {step.step}
               </div>
 
               <Card
-                className="bg-card border-border hover:border-primary/50 transition-all duration-300 relative z-10 mt-8 flex-1 max-w-[320px] w-full"
+                className="bg-card border-border hover:border-primary/50 transition-all duration-300 relative z-10 mt-8 flex-1 max-w-[320px] md:max-w-none w-full"
               >
-                <CardContent className="p-8 text-center pt-8">
-                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                    <step.icon className="w-10 h-10 text-primary" />
+                <CardContent className="p-6 md:p-8 text-center pt-8">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
+                    <step.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                  <h3 className="text-lg md:text-2xl font-bold text-foreground mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-base text-muted-foreground leading-relaxed">
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>
               </Card>
+
+              {/* Mobile Arrow (Vertical) */}
+              {index < steps.length - 1 && (
+                <div className="md:hidden mt-8 text-primary/30 flex flex-col items-center">
+                  {[...Array(3)].map((_, i) => (
+                    <motion.div
+                      key={`mobile-arrow-${index}-${i}`}
+                      animate={{ opacity: [0.2, 1, 0.2] }}
+                      transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.4 }}
+                    >
+                      <ChevronRight className="w-6 h-6 rotate-90" strokeWidth={1} />
+                    </motion.div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
