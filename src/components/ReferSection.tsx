@@ -119,14 +119,14 @@ const ReferSection = () => {
 
               {/* Mobile Arrow (Vertical) */}
               {index < steps.length - 1 && (
-                <div className="md:hidden mt-8 text-primary/30 flex flex-col items-center">
+                <div className="md:hidden mt-8 mb-4 text-primary/30 flex flex-col items-center -space-y-4">
                   {[...Array(3)].map((_, i) => (
                     <motion.div
                       key={`mobile-arrow-${index}-${i}`}
                       animate={{ opacity: [0.2, 1, 0.2] }}
                       transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.4 }}
                     >
-                      <ChevronRight className="w-6 h-6 rotate-90" strokeWidth={1} />
+                      <ChevronRight className="w-8 h-8 rotate-90" strokeWidth={1} />
                     </motion.div>
                   ))}
                 </div>

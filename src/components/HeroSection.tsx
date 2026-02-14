@@ -31,14 +31,14 @@ const HeroSection = () => {
               Experience seamless transactions, exciting rewards, and unmatched convenience. Pay bills, recharge, and earn cashback - all in one powerful app.
             </p>
 
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-              <a href="https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-black gap-2 shadow-xl py-6 px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap justify-center lg:justify-start gap-4">
+              <a href="https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-black gap-2 shadow-xl py-6 px-8">
                   <img src={`${import.meta.env.BASE_URL}play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
                   Google Play
                 </Button>
               </a>
-              <Button size="lg" variant="outline" className="border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-white gap-2 py-6 px-8">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-white gap-2 py-6 px-8">
                 <img src={`${import.meta.env.BASE_URL}app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
                 App Store
               </Button>
