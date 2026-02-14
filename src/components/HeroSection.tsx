@@ -15,23 +15,23 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-6 md:space-y-8 text-center lg:text-left"
+            className="space-y-6 md:space-y-8 text-left"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/20 backdrop-blur-sm rounded-full border border-primary/30">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="text-xs md:text-sm text-primary font-semibold uppercase tracking-wider">India's Fastest Growing Payment App</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] md:leading-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.05] md:leading-tight">
               Recharge & <br className="hidden sm:block" />
               <span className="text-primary">Bill Payment App</span>
             </h1>
 
-            <p className="text-lg md:text-2xl text-slate-400 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-lg md:text-2xl text-slate-400 max-w-lg leading-relaxed px-0">
               Experience seamless transactions, exciting rewards, and unmatched convenience. Pay bills, recharge, and earn cashback - all in one powerful app.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap justify-center lg:justify-start gap-4 px-4 sm:px-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:flex lg:flex-wrap justify-start gap-4">
               <a href="https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-black gap-2 shadow-xl py-6 px-8">
                   <img src={`${import.meta.env.BASE_URL}play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />

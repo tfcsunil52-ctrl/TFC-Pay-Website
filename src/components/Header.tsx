@@ -124,11 +124,11 @@ const Header = () => {
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild className="md:hidden">
-            <Button variant="ghost" size="icon">
-              <Menu className="w-6 h-6" />
+            <Button variant="ghost" size="icon" className="text-primary hover:text-primary hover:bg-primary/10">
+              <Menu className="w-7 h-7" />
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-background border-border overflow-y-auto">
+          <SheetContent side="right" className="bg-zinc-950 border-zinc-800 text-white overflow-y-auto w-[85vw] sm:w-[400px]">
             <nav className="flex flex-col gap-4 mt-8">
               <div className="space-y-4">
                 <p className="text-xs font-bold text-primary uppercase tracking-wider">Our Solutions</p>
@@ -150,13 +150,13 @@ const Header = () => {
                 ))}
               </div>
 
-              <div className="pt-4 space-y-4 border-t border-border">
+              <div className="pt-4 space-y-4 border-t border-zinc-800">
                 {navLinks.map((link) => (
                   <Link
                     key={link.label}
                     to={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="block text-lg font-medium text-muted-foreground hover:text-primary transition-colors text-left"
+                    className="block text-lg font-medium text-zinc-400 hover:text-primary transition-colors text-left"
                   >
                     {link.label}
                   </Link>
