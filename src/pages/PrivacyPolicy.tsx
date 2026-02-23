@@ -25,93 +25,156 @@ const PrivacyPolicy = () => {
 
                         <div className="prose prose-invert max-w-none space-y-12">
                             <section>
-                                <h2 className="text-2xl font-bold text-primary mb-6">Information We Collect</h2>
-                                <div className="grid md:grid-cols-2 gap-8">
-                                    <div className="bg-secondary/20 p-6 rounded-2xl border border-white/5">
-                                        <h3 className="text-lg font-semibold mb-4 text-foreground/90">Personal Data</h3>
-                                        <p className="text-muted-foreground text-sm mb-4">While using our Service, we may collect:</p>
-                                        <ul className="list-disc ml-6 text-muted-foreground space-y-2 text-sm">
-                                            <li>Email address</li>
-                                            <li>First name and last name</li>
-                                            <li>Phone number</li>
-                                            <li>Address, State, Province, ZIP/Postal code, City</li>
-                                        </ul>
-                                    </div>
-                                    <div className="bg-secondary/20 p-6 rounded-2xl border border-white/5">
-                                        <h3 className="text-lg font-semibold mb-4 text-foreground/90">Usage Data</h3>
-                                        <p className="text-muted-foreground text-sm space-y-2">
-                                            We may collect information on how the Service is accessed, including IP address, browser type, pages visited, time spent, and diagnostic data.
-                                        </p>
-                                    </div>
-                                </div>
+                                <h2 className="text-2xl font-bold text-primary mb-4">1. Information We Collect</h2>
+                                <h3 className="text-xl font-semibold text-foreground mb-3">Personal Information</h3>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    We may collect personally identifiable information to provide secure and efficient digital payment services, including:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2 mb-8">
+                                    <li>Full name</li>
+                                    <li>Email address</li>
+                                    <li>Mobile number</li>
+                                    <li>Address and location details</li>
+                                    <li>Account and transaction information</li>
+                                </ul>
+
+                                <h3 className="text-xl font-semibold text-foreground mb-3">Automatically Collected Data (Usage Data)</h3>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    When you access our platform, we automatically collect technical data such as:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>IP address and browser details</li>
+                                    <li>Device type and operating system</li>
+                                    <li>Pages visited and time spent</li>
+                                    <li>Login activity and device identifiers</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm italic">
+                                    This helps improve performance, prevent fraud, and enhance user experience.
+                                </p>
                             </section>
 
                             <section>
-                                <h2 className="text-2xl font-bold text-primary mb-6">Use of Your Information</h2>
-                                <div className="bg-secondary/10 p-8 rounded-3xl border border-white/5">
-                                    <p className="text-muted-foreground mb-6">We use the collected data for various purposes, including:</p>
-                                    <ul className="grid sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
-                                        <li className="flex items-start gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                            To provide and maintain our Service
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                            To manage your Account
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                            To contact you
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                            To provide you with news and special offers
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                            To manage your requests
-                                        </li>
-                                        <li className="flex items-start gap-2">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 shrink-0" />
-                                            For business transfers
-                                        </li>
-                                    </ul>
-                                </div>
+                                <h2 className="text-2xl font-bold text-primary mb-4">2. Cookies & Tracking Technologies</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    We use cookies and similar tracking tools to:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>Enable secure login and transactions</li>
+                                    <li>Remember user preferences</li>
+                                    <li>Analyze website traffic and performance</li>
+                                    <li>Improve digital recharge and payment services</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                                    You can manage cookie settings in your browser, but disabling cookies may limit certain features.
+                                </p>
                             </section>
 
-                            <div className="grid md:grid-cols-2 gap-8">
-                                <section className="bg-secondary/20 p-8 rounded-3xl border border-white/5">
-                                    <h2 className="text-xl font-bold text-primary mb-4">Cookies & Tracking</h2>
-                                    <p className="text-muted-foreground text-sm">
-                                        We use cookies and similar tracking technologies to track the activity on our Service and store certain information. You can instruct your browser to refuse all cookies.
-                                    </p>
-                                </section>
-                                <section className="bg-secondary/20 p-8 rounded-3xl border border-white/5">
-                                    <h2 className="text-xl font-bold text-primary mb-4">Data Security</h2>
-                                    <p className="text-muted-foreground text-sm">
-                                        The security of your data is important to us, but no method of transmission over the Internet is 100% secure. We strive to use commercially acceptable means to protect your Personal Data.
-                                    </p>
-                                </section>
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">3. How We Use Your Personal Data</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    Your data is used to deliver secure and reliable financial services, including:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>Processing mobile recharge, DTH recharge, and utility bill payments</li>
+                                    <li>Managing user accounts and customer support</li>
+                                    <li>Sending transaction alerts, updates, and service notifications</li>
+                                    <li>Improving platform performance and security</li>
+                                    <li>Preventing fraud and unauthorized access</li>
+                                    <li>Marketing relevant offers and promotions (with consent)</li>
+                                    <li>Meeting legal and regulatory requirements</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">4. Sharing of Information</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    We may share your information only when necessary, such as with:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2 mb-4">
+                                    <li>Trusted service providers and payment partners</li>
+                                    <li>Business affiliates and authorized partners</li>
+                                    <li>Legal or regulatory authorities when required by law</li>
+                                    <li>Entities involved in mergers or business restructuring</li>
+                                </ul>
+                                <p className="text-primary font-bold">We do not sell personal data to third parties.</p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">5. Data Retention Policy</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    We retain personal data only as long as necessary to:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>Provide services and process transactions</li>
+                                    <li>Comply with legal obligations</li>
+                                    <li>Prevent fraud and resolve disputes</li>
+                                    <li>Improve platform functionality</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm italic">Usage data may be stored for analytics and security monitoring.</p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">6. Data Security Measures</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    We implement industry-standard security practices to protect your personal information, including encryption and secure payment processing. However, no online system is completely risk-free.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">7. Your Data Rights</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">You have the right to:</p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>Access and review your personal data</li>
+                                    <li>Update or correct inaccurate information</li>
+                                    <li>Request deletion of personal data</li>
+                                    <li>Withdraw consent for marketing communication</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                                    You can manage your data through account settings or by contacting support.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">8. Children’s Privacy</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Our services are not intended for individuals under 13 years of age. We do not knowingly collect personal data from minors.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">9. Third-Party Websites</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Our platform may contain links to external websites. We are not responsible for their privacy practices or content. Please review their policies separately.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">10. Updates to This Privacy Policy</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    We may update this Privacy Policy periodically to reflect legal or service changes. Updates will be posted on this page with the revised effective date.
+                                </p>
+                            </section>
+
+                            <div className="pt-12 border-t border-white/10 mt-12">
+                                <h2 className="text-2xl font-bold text-primary mb-4">11. Contact Information</h2>
+                                <p className="text-muted-foreground mb-6 leading-relaxed">
+                                    For questions, data requests, or privacy concerns, contact us through:
+                                </p>
+                                <div className="grid sm:grid-cols-3 gap-6">
+                                    <div className="space-y-1">
+                                        <p className="font-bold text-foreground">Email Support</p>
+                                        <a href="mailto:care@tfcpay.app" className="text-primary hover:underline text-sm font-medium">care@tfcpay.app</a>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <p className="font-bold text-foreground">Contact Form</p>
+                                        <p className="text-muted-foreground text-sm">Available on our website</p>
+                                    </div>
+                                    <div className="space-y-1">
+                                        <p className="font-bold text-foreground">Phone Support</p>
+                                        <a href="tel:0120-442-0120" className="text-primary hover:underline text-sm font-medium">0120-442-0120</a>
+                                    </div>
+                                </div>
                             </div>
-
-                            <section className="bg-gradient-to-br from-secondary/10 to-transparent p-8 rounded-3xl border border-white/5">
-                                <h2 className="text-2xl font-bold text-primary mb-6">Contact Us</h2>
-                                <p className="text-muted-foreground mb-6">If you have any questions about this Privacy Policy, please contact us:</p>
-                                <div className="space-y-4">
-                                    <p className="flex items-center gap-3 text-muted-foreground">
-                                        <span className="font-semibold text-foreground">Email:</span>
-                                        <a href="mailto:care@tfcpay.app" className="text-primary hover:underline">care@tfcpay.app</a>
-                                    </p>
-                                    <p className="flex items-center gap-3 text-muted-foreground">
-                                        <span className="font-semibold text-foreground">Phone:</span>
-                                        <a href="tel:0120-442-0120" className="text-primary hover:underline">0120-442-0120</a>
-                                    </p>
-                                    <p className="flex items-center gap-3 text-muted-foreground">
-                                        <span className="font-semibold text-foreground">Website:</span>
-                                        <a href="https://www.tfcpay.app/" className="text-primary hover:underline">www.tfcpay.app</a>
-                                    </p>
-                                </div>
-                            </section>
                         </div>
                     </motion.div>
                 </div>

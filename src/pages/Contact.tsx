@@ -43,55 +43,63 @@ const Contact = () => {
                     </div>
 
                     <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-                        {/* Contact Info Cards */}
-                        <div className="lg:col-span-5 space-y-6">
+                        {/* Contact Info - Clean Stacked Layout */}
+                        <div className="lg:col-span-5 space-y-12 relative h-full">
+                            {/* Symmetrical Glow (Heatmap) */}
+                            <div className="absolute top-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[100px] -ml-24 -mt-12 pointer-events-none" />
+
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.3 }}
-                                className="grid sm:grid-cols-2 gap-4"
+                                className="space-y-10 relative z-10 py-4"
                             >
-                                <div className="bg-secondary/20 p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-300 group">
-                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform">
-                                        <Mail className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+                                {/* Mail */}
+                                <div className="flex gap-6 items-start group">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-secondary/30 flex items-center justify-center shrink-0 border border-white/5 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300">
+                                        <Mail className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform" />
                                     </div>
-                                    <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2">Email us</h3>
-                                    <a href="mailto:care@tfcpay.app" className="text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm break-all">care@tfcpay.app</a>
-                                </div>
-
-                                <div className="bg-secondary/20 p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-300 group">
-                                    <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-transform">
-                                        <Phone className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                                    </div>
-                                    <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2">Call us</h3>
-                                    <a href="tel:0120-442-0120" className="text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm">0120-442-0120</a>
-                                </div>
-
-                                <div className="bg-secondary/20 p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-300 group sm:col-span-2">
-                                    <div className="flex gap-4 md:gap-6 items-start">
-                                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                            <Clock className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2">Open Hours</h3>
-                                            <p className="text-muted-foreground text-xs md:text-sm">Monday - Sunday</p>
-                                            <p className="text-primary font-bold text-sm md:text-base">06 AM - 09 PM</p>
-                                        </div>
+                                    <div>
+                                        <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Email us</h3>
+                                        <a href="mailto:care@tfcpay.app" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base break-all">care@tfcpay.app</a>
                                     </div>
                                 </div>
 
-                                <div className="bg-secondary/20 p-5 md:p-6 rounded-2xl md:rounded-3xl border border-white/5 hover:border-primary/20 transition-all duration-300 group sm:col-span-2">
-                                    <div className="flex gap-4 md:gap-6 items-start">
-                                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                                            <MapPin className="w-5 h-5 md:w-6 md:h-6 text-primary" />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-base md:text-lg font-bold mb-1 md:mb-2">Address</h3>
-                                            <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
-                                                Unit-22, 17th floor, L-2A, Pocket G, Sector-18,<br />
-                                                Noida, Uttar Pradesh 201301
-                                            </p>
-                                        </div>
+                                {/* Phone */}
+                                <div className="flex gap-6 items-start group">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-secondary/30 flex items-center justify-center shrink-0 border border-white/5 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300">
+                                        <Phone className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Call us</h3>
+                                        <a href="tel:0120-442-0120" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">0120-442-0120</a>
+                                    </div>
+                                </div>
+
+                                {/* Open Hours */}
+                                <div className="flex gap-6 items-start group">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-secondary/30 flex items-center justify-center shrink-0 border border-white/5 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300">
+                                        <Clock className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Open Hours</h3>
+                                        <p className="text-muted-foreground text-sm md:text-base">Monday - Sunday</p>
+                                        <p className="text-primary font-bold text-sm md:text-base mt-0.5">06 AM - 09 PM</p>
+                                    </div>
+                                </div>
+
+                                {/* Address */}
+                                <div className="flex gap-6 items-start group">
+                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-secondary/30 flex items-center justify-center shrink-0 border border-white/5 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300">
+                                        <MapPin className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform" />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Address</h3>
+                                        <p className="text-primary font-bold text-sm md:text-base mb-1.5 uppercase tracking-tight">TFC DIGITAL PVT LTD</p>
+                                        <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                                            Unit-22, 17th floor, L-2A, Pocket G, Sector-18,<br />
+                                            Noida, Uttar Pradesh 201301
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>

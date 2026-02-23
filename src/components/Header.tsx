@@ -19,6 +19,8 @@ import ContactPopup from "./ContactPopup";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about-us" },
+  { label: "Why Choose Us", href: "/why-choose-us" },
+  { label: "Terms & Conditions", href: "/terms-conditions" },
   { label: "Our Vision", href: "/our-vision" },
   { label: "FAQ's", href: "/faq" },
   { label: "Contact", href: "/contact" },
@@ -61,7 +63,7 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="container max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
           <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-8 w-auto object-contain" onError={(e) => {
@@ -70,10 +72,10 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-4">
           <Link
             to="/"
-            className="text-base font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
           >
             Home
           </Link>
@@ -81,7 +83,7 @@ const Header = () => {
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary text-base font-medium px-2">
+                <NavigationMenuTrigger className="bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary text-sm font-medium px-2">
                   Solutions
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="right-0 left-auto w-auto min-w-[300px] max-w-[90vw] md:max-w-[600px]">
@@ -128,7 +130,7 @@ const Header = () => {
             <Link
               key={link.label}
               to={link.href}
-              className="text-base font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2 whitespace-nowrap"
             >
               {link.label}
             </Link>
@@ -138,7 +140,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className="md:hidden">
+          <SheetTrigger asChild className="lg:hidden">
             <Button variant="outline" size="icon" className="border-primary/50 bg-zinc-900/50 hover:bg-zinc-800 text-white hover:text-white">
               <Menu className="w-6 h-6" />
             </Button>

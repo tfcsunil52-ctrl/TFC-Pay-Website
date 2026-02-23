@@ -19,79 +19,154 @@ const TermsConditions = () => {
                                 Terms & Conditions
                             </h1>
                             <p className="text-muted-foreground leading-relaxed">
-                                Welcome to the TFCPAY platform, owned and operated by TFC DIGITAL PVT LTD ("TFCPAY"). By accessing or using our Services, you agree to be bound by these terms and conditions.
+                                Welcome to our digital recharge and bill payment platform. These Terms & Conditions govern your access to and use of our website, mobile application, and services, including mobile recharge, DTH recharge, utility bill payments, and online payment services in India. By registering, accessing, browsing, or using our platform, you agree to comply with these Terms.
                             </p>
                         </div>
 
-                        <div className="prose prose-invert max-w-none space-y-8">
-                            <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5">
-                                <h2 className="text-xl font-bold text-primary mb-4">1. Eligibility</h2>
-                                <p className="text-muted-foreground">
-                                    You must be at least 18 years old to use our Services. By using TFCPAY, you represent and warrant that you have the right, authority, and capacity to enter into this Agreement and abide by its terms. TFCPAY reserves the right to refuse service, terminate accounts, or cancel transactions at its discretion.
-                                </p>
-                            </section>
-
-                            <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5">
-                                <h2 className="text-xl font-bold text-primary mb-4">2. Service Description</h2>
-                                <p className="text-muted-foreground">
-                                    TFCPAY provides a platform to purchase prepaid mobile/DTH recharge and make bill payments ("Recharge") through various payment methods. We facilitate payments to designated billers ("Biller(s)") based on Payment Instructions provided by you.
-                                </p>
-                            </section>
-
-                            <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5">
-                                <h2 className="text-xl font-bold text-primary mb-4">3. Payment and Fees</h2>
-                                <p className="text-muted-foreground">
-                                    You agree to pay all fees associated with your use of the Services. TFCPAY reserves the right to modify its fee structure at any time. You are responsible for ensuring sufficient funds/limits in your Payment Account to cover Recharge transactions.
-                                </p>
-                            </section>
-
-                            <div className="grid md:grid-cols-2 gap-6">
-                                <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5 h-full">
-                                    <h2 className="text-xl font-bold text-primary mb-4">4. User Responsibilities</h2>
-                                    <ul className="list-disc ml-6 text-muted-foreground space-y-2">
-                                        <li>Provide accurate Registration, Payment, and Biller Data.</li>
-                                        <li>Maintain and promptly update information.</li>
-                                        <li>Comply with all applicable laws.</li>
-                                        <li>Refrain from engaging in prohibited conduct.</li>
-                                    </ul>
-                                </section>
-
-                                <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5 h-full">
-                                    <h2 className="text-xl font-bold text-primary mb-4">5. Prohibited Conduct</h2>
-                                    <ul className="list-disc ml-6 text-muted-foreground space-y-2">
-                                        <li>Use TFCPAY for any unlawful purpose.</li>
-                                        <li>Misrepresent your identity or affiliation.</li>
-                                        <li>Interfere with the operation of TFCPAY.</li>
-                                        <li>Engage in fraudulent activities.</li>
-                                    </ul>
-                                </section>
-                            </div>
-
-                            <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5">
-                                <h2 className="text-xl font-bold text-primary mb-4">Rent Payment Terms & Conditions</h2>
+                        <div className="prose prose-invert max-w-none space-y-12">
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">1. User Eligibility</h2>
                                 <ul className="list-disc ml-6 text-muted-foreground space-y-2">
-                                    <li>First time user payout needs to be done after 72hrs.</li>
-                                    <li>One customer cannot make more than 2 payments in a month.</li>
-                                    <li>Any fraud reported by customer on HDFC account post intimation from bank end we will provide the documents against the fraud or will refund/reverse the amount.</li>
-                                    <li>Transaction limit for new user or existing user as per the agreement value.</li>
-                                    <li>Rent agreement to be maintained for every user.</li>
+                                    <li>You must be 18 years or older to use the Services.</li>
+                                    <li>Users under 13 years are not permitted.</li>
+                                    <li>You confirm you have the legal authority to enter into this agreement.</li>
+                                    <li>Providing false identity or impersonating others is strictly prohibited.</li>
                                 </ul>
                             </section>
 
-                            <section className="bg-secondary/10 p-6 rounded-2xl border border-white/5">
-                                <h2 className="text-xl font-bold text-primary mb-4">Refund Policy</h2>
-                                <p className="text-muted-foreground">
-                                    All Recharge sales are final. In case of non-delivery of Recharge after payment confirmation, please contact customer service for resolution. Refunds, if applicable, will be processed within 72 working hours to your TFCPAY Wallet.
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">2. Acceptance & Updates to Terms</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    We may update or modify these Terms at any time. Continued use of the platform after updates means you accept the revised Terms. Please review this page regularly for the latest version.
                                 </p>
                             </section>
 
-                            <div className="bg-primary/5 p-8 rounded-3xl border border-primary/20 mt-12">
-                                <h2 className="text-xl font-bold text-primary mb-4">Governing Law</h2>
-                                <p className="text-muted-foreground mb-4">
-                                    This Agreement shall be governed by and construed under the laws of India. Any disputes arising under this Agreement shall be subject to the exclusive jurisdiction of the courts in Delhi.
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">3. Digital Recharge & Bill Payment Services</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    Our platform provides secure online recharge and bill payment solutions, including:
+                                </p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2 text-sm md:text-base">
+                                    <li>Prepaid and postpaid mobile recharge</li>
+                                    <li>DTH recharge services</li>
+                                    <li>Utility and electricity bill payments</li>
+                                    <li>Digital payment processing</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                                    Service features, operators, payment options, and charges may vary depending on partners and availability.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">4. Fees, Payments & Transactions</h2>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>Transaction fees or service charges may apply.</li>
+                                    <li>Charges may change without prior notice.</li>
+                                    <li>Payments can be made through approved methods such as cards, bank accounts, or digital wallets.</li>
+                                    <li>Failed or reversed payment instructions may attract applicable charges.</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-6 font-semibold text-primary/80">We are not responsible for failed transactions caused by:</p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2 mt-2">
+                                    <li>Incorrect payment details</li>
+                                    <li>Insufficient balance or bank restrictions</li>
+                                    <li>Network or technical errors</li>
+                                    <li>Delays from service providers or billers</li>
+                                    <li>Events beyond reasonable control (system failure, natural disasters, etc.)</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">5. User Information & Account Responsibility</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">You agree to:</p>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>Provide accurate and updated personal and payment details</li>
+                                    <li>Maintain confidentiality of login credentials</li>
+                                    <li>Notify us immediately of unauthorized account access</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm italic">Accounts may be suspended if incorrect or misleading information is provided.</p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">6. Coupon & Promotional Offers</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Coupons and promotional offers are subject to the issuing partner's terms. We are not liable for losses, damages, or disputes arising from coupon usage.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">7. Prohibited Use of Services</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">You must not:</p>
+                                <ul className="grid md:grid-cols-2 gap-x-8 gap-y-2 list-disc ml-6 text-muted-foreground">
+                                    <li>Use the platform for illegal activities</li>
+                                    <li>Access other user accounts</li>
+                                    <li>Upload harmful software/viruses</li>
+                                    <li>Interfere with system security</li>
+                                    <li>Reverse engineer platform technology</li>
+                                    <li>Use automated tools to scrape data</li>
+                                    <li>Misuse payment systems</li>
+                                </ul>
+                                <p className="text-muted-foreground mt-4 text-sm font-bold text-primary/80">Violation may result in suspension, termination, or legal action.</p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">8. Privacy & Data Protection</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Your personal data is collected and processed according to our Privacy Policy. By using the platform, you consent to data collection, storage, and usage for service delivery and compliance.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">9. Third-Party Services & Links</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Our platform may contain links to third-party websites or services. We do not control or endorse external content and are not responsible for third-party transactions or policies.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">10. Refund Policy for Online Recharge</h2>
+                                <ul className="list-disc ml-6 text-muted-foreground space-y-2">
+                                    <li>All recharge transactions are final and non-refundable.</li>
+                                    <li>Users must verify mobile or account details before payment.</li>
+                                    <li>If payment is deducted but recharge is not processed within 24 hours, you may report the issue with full transaction details.</li>
+                                    <li>Verified failed transactions may be refunded to the platform wallet within the specified processing time.</li>
+                                </ul>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">11. Account Suspension & Termination</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    We may suspend or terminate accounts for misuse, suspicious activity, or violation of Terms without prior notice. Users must stop using services immediately upon termination.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">12. Limitation of Liability</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    We are not liable for indirect, incidental, or consequential damages including loss of profits, data, or business. Maximum liability, if applicable, will not exceed the amount paid for the service or ₹1000, whichever is lower.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">13. Indemnification</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    You agree to indemnify and hold the company harmless from claims, damages, or expenses arising from misuse of services or violation of these Terms.
+                                </p>
+                            </section>
+
+                            <section>
+                                <h2 className="text-2xl font-bold text-primary mb-4">14. Disclaimer of Warranties</h2>
+                                <p className="text-muted-foreground leading-relaxed">
+                                    Services are provided "as is" and "as available." We do not guarantee uninterrupted service, accuracy of third-party systems, or error-free operation. Use of the platform is at your own risk.
+                                </p>
+                            </section>
+
+                            <div className="pt-12 border-t border-white/10 mt-12">
+                                <h2 className="text-2xl font-bold text-primary mb-4">15. Governing Use</h2>
+                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                    If any provision of these Terms is found invalid, remaining provisions will remain in effect. Continued use of the platform confirms acceptance of all Terms.
                                 </p>
                                 <p className="text-sm text-muted-foreground italic">
-                                    Contact Us: If you have any questions, please contact us at <a href="mailto:care@tfcpay.app" className="text-primary hover:underline">care@tfcpay.app</a>
+                                    Contact Us: If you have any questions, please contact us at <a href="mailto:care@tfcpay.app" className="text-primary hover:underline font-bold">care@tfcpay.app</a>
                                 </p>
                             </div>
                         </div>

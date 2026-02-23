@@ -52,6 +52,7 @@ const serviceLinks = [
 
 const companyLinks = [
   { label: "About us", href: "/about-us" },
+  { label: "Why Choose Us", href: "/why-choose-us" },
   { label: "Our Vision", href: "/our-vision" },
   { label: "Contact Us", href: "/contact" },
   { label: "FAQ's", href: "/faq" },
@@ -90,9 +91,12 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Unit-22, 17th floor,L-2A, Pocket G, Sector-18, Noida, Uttar Pradesh 201301
-                </p>
+                <div className="space-y-1">
+                  <p className="text-sm font-bold text-foreground">TFC DIGITAL PVT LTD</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Unit-22, 17th floor, L-2A, Pocket G, Sector-18, Noida, Uttar Pradesh 201301
+                  </p>
+                </div>
               </div>
 
               <a href="mailto:care@tfcpay.app" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
