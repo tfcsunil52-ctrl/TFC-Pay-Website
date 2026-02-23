@@ -91,33 +91,39 @@ const StatsSection = () => {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-12">
                     {stats.map((stat, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.1 * index }}
-                            className="flex flex-col items-center md:items-start text-center md:text-left"
-                        >
-                            <div className="flex items-center gap-4 mb-4">
-                                <div className="text-primary hover:scale-110 transition-transform duration-500 shrink-0">
-                                    <stat.icon className="w-10 h-10 md:w-12 md:h-12" />
+                        <div key={index} className="relative flex flex-col items-center md:items-start text-center md:text-left">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: 0.1 * index }}
+                                className="w-full"
+                            >
+                                <div className="flex items-center gap-4 mb-4 justify-center md:justify-start">
+                                    <div className="text-primary hover:scale-110 transition-transform duration-500 shrink-0">
+                                        <stat.icon className="w-10 h-10 md:w-12 md:h-12" />
+                                    </div>
+                                    <h4 className="text-5xl md:text-6xl font-black text-primary tracking-tighter">
+                                        <Counter value={stat.value} suffix={stat.suffix} />
+                                    </h4>
                                 </div>
-                                <h4 className="text-5xl md:text-6xl font-black text-primary tracking-tighter">
-                                    <Counter value={stat.value} suffix={stat.suffix} />
-                                </h4>
-                            </div>
 
-                            <h3 className="text-xl font-bold text-white mb-3">
-                                {stat.label}
-                            </h3>
+                                <h3 className="text-xl font-bold text-white mb-3">
+                                    {stat.label}
+                                </h3>
 
-                            <p className="text-sm md:text-base text-slate-400 leading-relaxed">
-                                {stat.description}
-                            </p>
-                        </motion.div>
+                                <p className="text-sm md:text-base text-slate-400 leading-relaxed max-w-[280px] mx-auto md:mx-0">
+                                    {stat.description}
+                                </p>
+                            </motion.div>
+
+                            {/* Vertical Divider for lg screens */}
+                            {index < stats.length - 1 && (
+                                <div className="hidden lg:block absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 w-px h-32 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                            )}
+                        </div>
                     ))}
                 </div>
             </div>
