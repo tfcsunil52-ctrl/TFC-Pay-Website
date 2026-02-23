@@ -1,0 +1,226 @@
+import { useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu, Download, ChevronDown, Smartphone, CreditCard, Receipt, Tv, ShieldCheck, ShoppingBag, Store, Globe, Speaker } from "lucide-react";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
+import { cn } from "@/lib/utils";
+import DownloadPopup from "./DownloadPopup";
+import ContactPopup from "./ContactPopup";
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Our Vision", href: "/our-vision" },
+  { label: "FAQ's", href: "/faq" },
+  { label: "Contact", href: "/contact" },
+];
+
+const solutions = [
+  {
+    title: "Consumer Solutions",
+    items: [
+      { title: "Bill Payments", description: "Pay electricity, water, gas and more", icon: Receipt },
+      { title: "Mobile Recharge", description: "Quick and easy recharges for all operators", icon: Smartphone },
+      { title: "Insurance Payment", description: "Pay your premiums instantly", icon: ShieldCheck },
+    ],
+  },
+  {
+    title: "Business Solutions",
+    items: [
+      { title: "BBPS API", description: "Comprehensive Bharat Bill Payment solutions", icon: Receipt },
+      { title: "Mobile Recharge API", description: "All-in-one recharge solutions for partners", icon: Smartphone },
+      { title: "DTH Payment API", description: "DTH recharge solutions for your platform", icon: Tv },
+    ],
+  },
+];
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isDownloadOpen, setIsDownloadOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleSolutionClick = (e: React.MouseEvent, category: string) => {
+    e.preventDefault();
+    if (category === "Consumer Solutions") {
+      setIsDownloadOpen(true);
+    } else if (category === "Business Solutions") {
+      setIsContactOpen(true);
+    }
+  };
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-[100] bg-background/80 backdrop-blur-md border-b border-border">
+      <div className="container max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+          <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-8 w-auto object-contain" onError={(e) => {
+            e.currentTarget.style.display = 'none';
+          }} />
+        </Link>
+
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-6">
+          <Link
+            to="/"
+            className="text-base font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
+          >
+            Home
+          </Link>
+
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent text-muted-foreground hover:bg-transparent hover:text-primary focus:bg-transparent focus:text-primary data-[active]:bg-transparent data-[state=open]:bg-transparent data-[state=open]:text-primary text-base font-medium px-2">
+                  Solutions
+                </NavigationMenuTrigger>
+                <NavigationMenuContent className="right-0 left-auto w-auto min-w-[300px] max-w-[90vw] md:max-w-[600px]">
+                  <div className="flex flex-col md:flex-row p-4 md:p-6 gap-6 md:gap-8 bg-popover/95 backdrop-blur-sm">
+                    {solutions.map((category) => (
+                      <div key={category.title} className="flex-1 space-y-4 min-w-[200px]">
+                        <h4 className="text-sm font-semibold text-foreground px-2">
+                          {category.title}
+                        </h4>
+                        <div className="grid gap-1">
+                          {category.items.map((item) => (
+                            <NavigationMenuLink asChild key={item.title}>
+                              <a
+                                href="#"
+                                onClick={(e) => handleSolutionClick(e, category.title)}
+                                className="group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted focus:bg-muted"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <div className="p-2 rounded-md bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300 mt-1">
+                                    <item.icon className="w-4 h-4" />
+                                  </div>
+                                  <div className="space-y-1">
+                                    <div className="text-sm font-medium leading-none text-foreground">
+                                      {item.title}
+                                    </div>
+                                    <p className="line-clamp-2 text-xs leading-snug text-muted-foreground group-hover:text-muted-foreground">
+                                      {item.description}
+                                    </p>
+                                  </div>
+                                </div>
+                              </a>
+                            </NavigationMenuLink>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+
+          {navLinks.slice(1).map((link) => (
+            <Link
+              key={link.label}
+              to={link.href}
+              className="text-base font-medium text-muted-foreground hover:text-primary transition-colors px-2 py-2"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
+
+
+        {/* Mobile Menu */}
+        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          <SheetTrigger asChild className="md:hidden">
+            <Button variant="outline" size="icon" className="border-primary/50 bg-zinc-900/50 hover:bg-zinc-800 text-white hover:text-white">
+              <Menu className="w-6 h-6" />
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right" className="bg-zinc-950 border-zinc-800 overflow-y-auto w-[85%] sm:w-[400px] p-6 [&>button]:text-white [&>button]:opacity-100">
+            <div className="flex flex-col gap-8 mt-4">
+              {/* Logo in Side Menu */}
+              <div className="pb-4 border-b border-zinc-800">
+                <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-8 w-auto" />
+              </div>
+
+              {/* Navigation Links */}
+              <nav className="flex flex-col gap-2">
+                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-2 opacity-70">Main Menu</p>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      "flex items-center justify-between py-3 px-4 rounded-xl text-base font-medium transition-all duration-300",
+                      location.pathname === link.href
+                        ? "bg-primary/10 text-primary border border-primary/20"
+                        : "text-slate-400 hover:text-white hover:bg-white/5"
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+
+              {/* Solutions Accordion-like list */}
+              <div className="space-y-6">
+                <p className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-2 opacity-70">Solutions</p>
+                {solutions.map((category) => (
+                  <div key={category.title} className="space-y-3">
+                    <p className="text-sm font-bold text-white pl-4">{category.title}</p>
+                    <div className="grid gap-1">
+                      {category.items.map((item) => (
+                        <button
+                          key={item.title}
+                          onClick={(e) => {
+                            setIsOpen(false);
+                            handleSolutionClick(e, category.title);
+                          }}
+                          className="flex items-center gap-4 py-3 px-4 rounded-xl text-sm text-slate-400 hover:text-white hover:bg-white/5 transition-all text-left group"
+                        >
+                          <div className="p-2 rounded-lg bg-zinc-900 text-slate-500 group-hover:text-primary group-hover:bg-primary/10 transition-colors">
+                            <item.icon className="w-4 h-4" />
+                          </div>
+                          <span className="font-medium">{item.title}</span>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Actions */}
+              <div className="pt-6 border-t border-zinc-800 mt-auto flex flex-col gap-4">
+                <Button
+                  onClick={() => {
+                    setIsOpen(false);
+                    setIsDownloadOpen(true);
+                  }}
+                  className="w-full h-12 bg-primary hover:bg-primary/90 text-black font-bold rounded-xl shadow-lg shadow-primary/20 gap-2"
+                >
+                  <Download className="w-5 h-5" />
+                  Download App
+                </Button>
+                <p className="text-center text-[10px] text-slate-600">
+                  © 2026 TFCPAY. All rights reserved.
+                </p>
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+      <DownloadPopup isOpen={isDownloadOpen} onOpenChange={setIsDownloadOpen} />
+      <ContactPopup isOpen={isContactOpen} onOpenChange={setIsContactOpen} />
+    </header>
+  );
+};
+
+export default Header;
