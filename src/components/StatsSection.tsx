@@ -119,9 +119,9 @@ const StatsSection = () => {
                                 </p>
                             </motion.div>
 
-                            {/* Vertical Divider for lg screens */}
+                            {/* Vertical Divider for large screens */}
                             {index < stats.length - 1 && (
-                                <div className="hidden lg:block absolute -right-4 md:-right-6 top-1/2 -translate-y-1/2 w-px h-32 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+                                <div className="hidden lg:block absolute -right-4 md:-right-6 lg:-right-[24px] top-1/2 -translate-y-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/25 to-transparent" />
                             )}
                         </div>
                     ))}
