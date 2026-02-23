@@ -106,11 +106,17 @@ const Contact = () => {
                                 <h2 className="text-xl md:text-2xl font-bold mb-1 md:mb-2">Drop a message us</h2>
                                 <p className="text-muted-foreground text-sm mb-6 md:mb-8">Fill up form below, our team will get back soon</p>
 
-                                <form className="space-y-4 md:space-y-6 relative z-10" onSubmit={(e) => e.preventDefault()}>
+                                <form
+                                    action="https://formspree.io/f/xojnpdzr"
+                                    method="POST"
+                                    className="space-y-4 md:space-y-6 relative z-10"
+                                >
                                     <div className="grid md:grid-cols-2 gap-4 md:gap-6">
                                         <div className="space-y-2">
                                             <label className="text-xs md:text-sm font-medium pl-1">Full Name</label>
                                             <Input
+                                                name="name"
+                                                required
                                                 placeholder="John Doe"
                                                 className="bg-background/50 border-white/10 h-11 md:h-12 rounded-lg md:rounded-xl focus:border-primary transition-all"
                                             />
@@ -118,7 +124,9 @@ const Contact = () => {
                                         <div className="space-y-2">
                                             <label className="text-xs md:text-sm font-medium pl-1">Email Address</label>
                                             <Input
+                                                name="email"
                                                 type="email"
+                                                required
                                                 placeholder="email@example.com"
                                                 className="bg-background/50 border-white/10 h-11 md:h-12 rounded-lg md:rounded-xl focus:border-primary transition-all"
                                             />
@@ -128,6 +136,8 @@ const Contact = () => {
                                     <div className="space-y-2">
                                         <label className="text-xs md:text-sm font-medium pl-1">Subject</label>
                                         <Input
+                                            name="subject"
+                                            required
                                             placeholder="How can we help?"
                                             className="bg-background/50 border-white/10 h-11 md:h-12 rounded-lg md:rounded-xl focus:border-primary transition-all"
                                         />
@@ -136,12 +146,14 @@ const Contact = () => {
                                     <div className="space-y-2">
                                         <label className="text-xs md:text-sm font-medium pl-1">Your Message</label>
                                         <Textarea
+                                            name="message"
+                                            required
                                             placeholder="Tell us more about your inquiry..."
                                             className="bg-background/50 border-white/10 min-h-[120px] md:min-h-[150px] rounded-xl focus:border-primary transition-all resize-none"
                                         />
                                     </div>
 
-                                    <Button className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-black font-bold text-base md:text-lg rounded-xl md:rounded-2xl shadow-xl shadow-primary/20 group">
+                                    <Button type="submit" className="w-full h-12 md:h-14 bg-primary hover:bg-primary/90 text-black font-bold text-base md:text-lg rounded-xl md:rounded-2xl shadow-xl shadow-primary/20 group">
                                         Send Message
                                         <Send className="w-4 h-4 md:w-5 md:h-5 ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                     </Button>
