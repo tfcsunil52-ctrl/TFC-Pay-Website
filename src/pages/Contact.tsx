@@ -72,19 +72,7 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Call us</h3>
-                                        <a href="tel:0120-442-0120" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">0120-442-0120</a>
-                                    </div>
-                                </div>
-
-                                {/* Open Hours */}
-                                <div className="flex gap-6 items-start group">
-                                    <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-secondary/30 flex items-center justify-center shrink-0 border border-white/5 group-hover:border-primary/30 group-hover:bg-primary/10 transition-all duration-300">
-                                        <Clock className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg md:text-xl font-bold text-foreground mb-1">Open Hours</h3>
-                                        <p className="text-muted-foreground text-sm md:text-base">Monday - Sunday</p>
-                                        <p className="text-primary font-bold text-sm md:text-base mt-0.5">06 AM - 09 PM</p>
+                                        <a href="tel:99999-06-222" className="text-muted-foreground hover:text-primary transition-colors text-sm md:text-base">99999-06-222</a>
                                     </div>
                                 </div>
 

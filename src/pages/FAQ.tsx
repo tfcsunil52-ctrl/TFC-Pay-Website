@@ -100,7 +100,7 @@ const FAQ = () => {
                                     Email Support
                                 </a>
                                 <a
-                                    href="tel:0120-442-0120"
+                                    href="tel:99999-06-222"
                                     className="px-8 py-3 bg-secondary text-foreground font-bold rounded-full hover:bg-secondary/80 border border-white/10 transition-all hover:scale-105"
                                 >
                                     Call Us

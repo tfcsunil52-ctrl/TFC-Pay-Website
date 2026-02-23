@@ -104,9 +104,9 @@ const Footer = () => {
                 <span>care@tfcpay.app</span>
               </a>
 
-              <a href="tel:0120-442-0120" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:99999-06-222" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
                 <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>0120-442-0120</span>
+                <span>99999-06-222</span>
               </a>
             </div>
           </div>

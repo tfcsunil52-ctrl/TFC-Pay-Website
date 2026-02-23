@@ -171,7 +171,7 @@ const PrivacyPolicy = () => {
                                     </div>
                                     <div className="space-y-1">
                                         <p className="font-bold text-foreground">Phone Support</p>
-                                        <a href="tel:0120-442-0120" className="text-primary hover:underline text-sm font-medium">0120-442-0120</a>
+                                        <a href="tel:99999-06-222" className="text-primary hover:underline text-sm font-medium">99999-06-222</a>
                                     </div>
                                 </div>
                             </div>

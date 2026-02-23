@@ -4,12 +4,6 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const premiumServices = [
   {
-    iconImage: "card-transfer-icon.webp",
-    title: "Credit Card to Bank Transfer",
-    description: "Transfer money from your credit card directly to any bank account instantly. Manage your cash flow efficiently with our secure transfer service.",
-    features: ["Instant settlements", "Secure and encrypted", "Transfer up to 100% limit"],
-  },
-  {
     iconImage: "insurance-icon.webp",
     title: "Insurance Premium Payment",
     description: "Pay your insurance premiums for health, life, and vehicle insurance policies instantly.",
