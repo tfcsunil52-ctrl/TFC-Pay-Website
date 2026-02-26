@@ -86,7 +86,7 @@ const Footer = () => {
                 We provide user-friendly technology to vendors via in-app/web portal means. In turn, this gives retailers and distributors access to an array of financial products. We provide recharge & bill pay services by using safe and secure technology to assist people with our services.
               </p>
             </div>
-            <div className="pt-10">
+            <div className="pt-4">
               <h4 className="text-sm font-semibold text-foreground mb-3">Follow Us</h4>
               <div className="flex items-center gap-3">
                 {socialLinks.map((social) => (
@@ -160,7 +160,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="space-y-3 pt-12 border-t border-border mt-12">
+            <div className="space-y-3 pt-7 border-t border-border mt-7">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
