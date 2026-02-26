@@ -142,7 +142,7 @@ const Footer = () => {
           </div>
 
           {/* 4. Contact & Newsletter */}
-          <div className="space-y-8">
+          <div className="space-y-14">
             <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
