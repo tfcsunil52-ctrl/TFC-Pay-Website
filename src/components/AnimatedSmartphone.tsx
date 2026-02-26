@@ -11,7 +11,7 @@ const ICONS = [
     { name: "Landline", src: `${import.meta.env.BASE_URL}Icons/landline.webp` },
     { name: "Mobile Recharge", src: `${import.meta.env.BASE_URL}Icons/mobile-recharge.webp` },
     { name: "Piped Gas", src: `${import.meta.env.BASE_URL}Icons/piped-gas.webp` },
-    { name: "Rent", src: `${import.meta.env.BASE_URL}Icons/rent.webp` },
+
     { name: "Water Bill", src: `${import.meta.env.BASE_URL}Icons/water-bill.webp` },
     { name: "Wifi", src: `${import.meta.env.BASE_URL}Icons/wifi.webp` },
 ];
