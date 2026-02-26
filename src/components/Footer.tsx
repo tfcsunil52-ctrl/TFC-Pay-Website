@@ -160,7 +160,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="space-y-3 pt-7 border-t border-border mt-7">
+            <div className="space-y-3 pt-10 border-t border-border mt-10">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
