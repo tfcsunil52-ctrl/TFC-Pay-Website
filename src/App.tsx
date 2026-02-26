@@ -60,7 +60,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ChatSupport />
-      <BrowserRouter>
+      <BrowserRouter basename="/TFC-Pay-Website">
         <ScrollToTop />
         <Suspense fallback={<PageLoader />}>
           <Routes>
