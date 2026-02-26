@@ -73,47 +73,40 @@ const Footer = () => {
     <footer id="footer" className="bg-card border-t border-border pt-16 pb-8">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* 1. Brand & Contact */}
-          {/* 1. Brand & Contact */}
-          <div className="space-y-6">
+          {/* 1. Brand, About & Social */}
+          <div className="space-y-5">
             <div className="flex items-center">
-              <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-10 w-auto object-contain" onError={(e) => {
+              <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-6 w-auto object-contain" onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }} />
             </div>
-            <div>
-              <h3 className="text-lg font-bold text-foreground mb-4">About Us</h3>
+            <div className="pt-2">
+              <h3 className="text-lg font-bold text-foreground mb-2">About Us</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 We provide user-friendly technology to vendors via in-app/web portal means. In turn, this gives retailers and distributors access to an array of financial products. We provide recharge & bill pay services by using safe and secure technology to assist people with our services.
               </p>
             </div>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <div className="space-y-1">
-                  <p className="text-sm font-bold text-foreground">TFC DIGITAL PVT LTD</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    Unit-22, 17th floor, L-2A, Pocket G, Sector-18, Noida, Uttar Pradesh 201301
-                  </p>
-                </div>
+            <div className="pt-2">
+              <h4 className="text-sm font-semibold text-foreground mb-3">Follow Us</h4>
+              <div className="flex items-center gap-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    className="w-9 h-9 bg-secondary rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-4 h-4" />
+                  </a>
+                ))}
               </div>
-
-              <a href="mailto:care@tfcpay.app" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Mail className="w-5 h-5 text-primary shrink-0" />
-                <span>care@tfcpay.app</span>
-              </a>
-
-              <a href="tel:99999-06-222" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
-                <Phone className="w-5 h-5 text-primary shrink-0" />
-                <span>99999-06-222</span>
-              </a>
             </div>
           </div>
 
           {/* 2. Services */}
           <div>
-            <h3 className="text-sm font-bold text-foreground mb-6 uppercase tracking-widest">Services</h3>
-            <ul className="space-y-3">
+            <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Services</h3>
+            <ul className="space-y-2">
               {serviceLinks.map((link) => (
                 <li key={link.label}>
                   <Link
@@ -135,9 +128,9 @@ const Footer = () => {
           </div>
 
           {/* 3. Company */}
-          <div>
-            <h3 className="text-sm font-bold text-foreground mb-6 uppercase tracking-widest">Company</h3>
-            <ul className="space-y-3">
+          <div className="pt-2 md:pt-0">
+            <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Company</h3>
+            <ul className="space-y-2">
               {companyLinks.map((link) => (
                 <li key={link.label}>
                   <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -148,37 +141,43 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 4. Newsletter & Socials */}
-          <div className="space-y-6">
-            <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Subscribe Newsletter</h3>
-            <p className="text-sm text-muted-foreground">
-              Be the first to receive all latest updates in your inbox.
-            </p>
-            <div className="flex gap-2">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-background"
-              />
-              <Button size="icon" className="bg-primary hover:bg-primary/90 text-primary-foreground shrink-0">
-                <Send className="w-4 h-4" />
-              </Button>
+          {/* 4. Newsletter & Contact */}
+          <div className="space-y-5">
+            <div>
+              <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Subscribe Newsletter</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                Be the first to receive all latest updates in your inbox.
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-background"
+                />
+                <Button size="icon" className="bg-primary hover:bg-primary/90 text-primary-foreground shrink-0">
+                  <Send className="w-4 h-4" />
+                </Button>
+              </div>
             </div>
 
-            <div className="pt-4">
-              <h4 className="text-sm font-semibold text-foreground mb-4">Follow Us</h4>
-              <div className="flex items-center gap-3">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                    aria-label={social.label}
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
+            <div className="space-y-4 pt-8 border-t border-border mt-8">
+              <div className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <div>
+                  <p className="text-sm font-bold text-foreground">TFC DIGITAL PVT LTD</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Unit-22, 17th floor, L-2A, Pocket G, Sector-18, Noida, Uttar Pradesh 201301
+                  </p>
+                </div>
               </div>
+              <a href="mailto:care@tfcpay.app" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Mail className="w-5 h-5 text-primary shrink-0" />
+                <span>care@tfcpay.app</span>
+              </a>
+              <a href="tel:99999-06-222" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Phone className="w-5 h-5 text-primary shrink-0" />
+                <span>99999-06-222</span>
+              </a>
             </div>
           </div>
         </div>
