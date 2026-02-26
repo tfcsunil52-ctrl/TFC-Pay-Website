@@ -39,13 +39,13 @@ const DownloadPopup = ({ isOpen, onOpenChange }: DownloadPopupProps) => {
                             <div className="flex flex-col gap-4">
                                 <a href="https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN" target="_blank" rel="noopener noreferrer">
                                     <Button className="w-full h-12 text-base gap-3 bg-green-500 hover:bg-green-600 text-black font-semibold shadow-lg shadow-green-900/20">
-                                        <img src={`${import.meta.env.BASE_URL}play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
+                                        <img src={`${import.meta.env.BASE_URL}public/play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
                                         Download from Google Play
                                     </Button>
                                 </a>
 
                                 <Button variant="outline" className="w-full h-12 text-base gap-3 border-green-500 bg-transparent hover:bg-transparent text-white hover:text-white">
-                                    <img src={`${import.meta.env.BASE_URL}app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
+                                    <img src={`${import.meta.env.BASE_URL}public/app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
                                     Download from App Store
                                 </Button>
                             </div>
@@ -71,3 +71,4 @@ const DownloadPopup = ({ isOpen, onOpenChange }: DownloadPopupProps) => {
 };
 
 export default DownloadPopup;
+

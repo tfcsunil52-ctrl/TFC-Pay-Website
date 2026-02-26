@@ -4,22 +4,22 @@ import { Target, BarChart3, MessageCircle, Calendar } from "lucide-react";
 
 const features = [
   {
-    image: `${import.meta.env.BASE_URL}why%20us%20(1).webp`,
+    image: `${import.meta.env.BASE_URL}public/why%20us%20(1).webp`,
     title: "Multiple Campaigns",
     description: "Run and participate in multiple cashback campaigns simultaneously to maximize your earnings.",
   },
   {
-    image: `${import.meta.env.BASE_URL}why%20us%20(4).webp`,
+    image: `${import.meta.env.BASE_URL}public/why%20us%20(4).webp`,
     title: "Advanced Analytics",
     description: "Track your spending patterns, cashback earned, and savings with detailed insights.",
   },
   {
-    image: `${import.meta.env.BASE_URL}why%20us%20new%20(4).webp`,
+    image: `${import.meta.env.BASE_URL}public/why%20us%20new%20(4).webp`,
     title: "Live Chat Support",
     description: "Get instant help with our 24/7 live chat support for all your queries and issues.",
   },
   {
-    image: `${import.meta.env.BASE_URL}why%20us%20new%20(1).webp`,
+    image: `${import.meta.env.BASE_URL}public/why%20us%20new%20(1).webp`,
     title: "Event Scheduler",
     description: "Schedule your bill payments and never miss a due date with automated reminders.",
   },
@@ -27,7 +27,7 @@ const features = [
 
 const WhyUsSection = () => {
   return (
-    <section id="why-us" className="py-12 md:py-16 relative">
+    <section id="why-us" className="py-12 md:py-16 relative bg-background">
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent pointer-events-none" />
 
       <motion.div
@@ -80,3 +80,4 @@ const WhyUsSection = () => {
 };
 
 export default WhyUsSection;
+

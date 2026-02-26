@@ -26,7 +26,7 @@ const reviews = [
 
 const ReviewsSection = () => {
   return (
-    <section id="reviews" className="py-12 md:py-16 relative">
+    <section id="reviews" className="py-12 md:py-16 relative bg-background">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent pointer-events-none" />
 
       <div className="container max-w-6xl mx-auto px-4">

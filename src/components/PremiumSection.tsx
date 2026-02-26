@@ -56,7 +56,7 @@ const PremiumSection = () => {
                       <div
                         className="absolute inset-0 bg-no-repeat opacity-30"
                         style={{
-                          backgroundImage: `url(${import.meta.env.BASE_URL}hero-bg.webp)`,
+                          backgroundImage: `url(${import.meta.env.BASE_URL}public/hero-bg.webp)`,
                           backgroundSize: '100% 100%',
                           backgroundPosition: 'center center'
                         }}
@@ -71,7 +71,7 @@ const PremiumSection = () => {
                             <div className="flex-shrink-0 flex justify-center">
                               <div className="w-40 h-40 md:w-56 md:h-56 flex items-center justify-center">
                                 <img
-                                  src={`${import.meta.env.BASE_URL}${service.iconImage}`}
+                                  src={`${import.meta.env.BASE_URL}public/${service.iconImage}`}
                                   alt={service.title}
                                   className="w-full h-full object-contain drop-shadow-2xl"
                                 />
@@ -115,3 +115,4 @@ const PremiumSection = () => {
 };
 
 export default PremiumSection;
+

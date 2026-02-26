@@ -60,7 +60,7 @@ const AboutUs = () => {
                                 <div
                                     className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-20"
                                     style={{
-                                        backgroundImage: `url(${import.meta.env.BASE_URL}bg-01.webp)`,
+                                        backgroundImage: `url(${import.meta.env.BASE_URL}public/bg-01.webp)`,
                                         transform: 'scaleX(-1)'
                                     }}
                                 />
@@ -92,3 +92,4 @@ const AboutUs = () => {
 };
 
 export default AboutUs;
+

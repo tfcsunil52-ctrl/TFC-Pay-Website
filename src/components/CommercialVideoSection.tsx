@@ -57,7 +57,7 @@ const CommercialVideoSection = () => {
     };
 
     return (
-        <section className="py-12 md:py-16 relative">
+        <section className="py-12 md:py-16 relative bg-background">
             <div className="container max-w-6xl mx-auto px-4">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                     {/* Left - Content */}
@@ -95,14 +95,14 @@ const CommercialVideoSection = () => {
                                 loop
                                 playsInline
                                 preload="metadata"
-                                poster={`${import.meta.env.BASE_URL}thumbnail.webp`}
+                                poster={`${import.meta.env.BASE_URL}public/thumbnail.webp`}
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
                                 className="w-full h-full object-cover cursor-pointer"
                                 onClick={handlePlayPause}
                             >
                                 {shouldLoad && (
-                                    <source src={`${import.meta.env.BASE_URL}video.webm`} type="video/webm" />
+                                    <source src={`${import.meta.env.BASE_URL}public/video.webm`} type="video/webm" />
                                 )}
                             </video>
 
@@ -142,3 +142,4 @@ const CommercialVideoSection = () => {
 };
 
 export default CommercialVideoSection;
+

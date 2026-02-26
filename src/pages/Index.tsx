@@ -35,15 +35,14 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <StatsSection />
         <PartnersSection />
         <ServicesSection />
         <PremiumSection />
         <WhyUsSection />
         <ReviewsSection />
-
         <CommercialVideoSection />
         <DownloadSection />
+        <StatsSection />
       </main>
       <Footer />
     </div>

@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Suspense, lazy } from "react";
 import ChatSupport from "./components/ChatSupport";
 import ScrollToTop from "./components/ScrollToTop";
@@ -18,6 +18,7 @@ const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CancellationRefund = lazy(() => import("./pages/CancellationRefund"));
 const Contact = lazy(() => import("./pages/Contact"));
 const WhyChooseUs = lazy(() => import("./pages/WhyChooseUs"));
+const Copyright = lazy(() => import("./pages/Copyright"));
 
 const queryClient = new QueryClient();
 
@@ -59,7 +60,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <ChatSupport />
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -72,11 +73,12 @@ const App = () => (
             <Route path="/cancellation-refund-policy" element={<CancellationRefund />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />
+            <Route path="/copyright" element={<Copyright />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
-      </HashRouter>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );

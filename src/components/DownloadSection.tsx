@@ -5,14 +5,14 @@ import { QrCode, Smartphone } from "lucide-react";
 
 const DownloadSection = () => {
   return (
-    <section className="py-12 md:py-16 relative">
+    <section className="py-12 md:py-16 relative bg-background">
       <div className="container max-w-6xl mx-auto px-4">
         <Card className="relative bg-slate-900 border-primary/30 overflow-hidden">
           {/* Background Image with Overlay */}
           <div
             className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40 shadow-inner"
             style={{
-              backgroundImage: `url(${import.meta.env.BASE_URL}bg-01.webp)`,
+              backgroundImage: `url(${import.meta.env.BASE_URL}public/bg-01.webp)`,
               transform: 'scaleX(-1)'
             }}
           />
@@ -45,12 +45,12 @@ const DownloadSection = () => {
                 <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start">
                   <a href="https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                     <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground gap-2">
-                      <img src={`${import.meta.env.BASE_URL}play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
+                      <img src={`${import.meta.env.BASE_URL}public/play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
                       Google Play
                     </Button>
                   </a>
                   <Button size="lg" variant="outline" className="w-full sm:w-auto border-primary/50 text-foreground hover:bg-primary/5 hover:text-primary gap-2">
-                    <img src={`${import.meta.env.BASE_URL}app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
+                    <img src={`${import.meta.env.BASE_URL}public/app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
                     App Store
                   </Button>
                 </div>
@@ -86,3 +86,4 @@ const DownloadSection = () => {
 };
 
 export default DownloadSection;
+

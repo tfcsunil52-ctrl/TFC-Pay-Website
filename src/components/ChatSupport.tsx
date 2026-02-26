@@ -53,7 +53,7 @@ const ChatSupport = () => {
                                     className="group h-16 w-16 hover:w-32 pr-2 pl-2 rounded-full shadow-none hover:shadow-2xl hover:scale-105 transition-all duration-500 overflow-hidden border border-transparent hover:border-primary bg-transparent hover:bg-gradient-to-r hover:from-slate-900 hover:to-gray-800 flex items-center justify-start gap-2"
                                 >
                                     <div className="h-12 w-12 rounded-full overflow-hidden flex-shrink-0 ml-0.5 shadow-lg bg-black/20">
-                                        <img src={`${import.meta.env.BASE_URL}Icons/support-agent-avatar.webp`} alt="Support" className="h-full w-full object-cover" />
+                                        <img src={`${import.meta.env.BASE_URL}public/Icons/support-agent-avatar.webp`} alt="Support" className="h-full w-full object-cover" />
                                     </div>
                                     <div className="text-white font-bold text-sm flex flex-col items-start leading-[1.1] opacity-0 group-hover:opacity-100 group-hover:animate-flicker transition-opacity duration-300">
                                         <span>Ask</span>
@@ -79,7 +79,7 @@ const ChatSupport = () => {
                                         <div className="flex items-center gap-3">
                                             <div className="relative h-10 w-10">
                                                 <div className="h-full w-full overflow-hidden rounded-full border border-primary/20 bg-background/50">
-                                                    <img src={`${import.meta.env.BASE_URL}Icons/support-agent.webp`} alt="Trisha" className="h-full w-full object-cover" />
+                                                    <img src={`${import.meta.env.BASE_URL}public/Icons/support-agent.webp`} alt="Trisha" className="h-full w-full object-cover" />
                                                 </div>
                                                 <div className="absolute bottom-0 right-0 h-3 w-3 bg-green-500 rounded-full border-2 border-white"></div>
                                             </div>
@@ -139,3 +139,4 @@ const ChatSupport = () => {
 };
 
 export default ChatSupport;
+

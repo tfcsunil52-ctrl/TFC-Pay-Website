@@ -5,67 +5,67 @@ import DownloadPopup from "./DownloadPopup";
 const services = [
   {
     id: "Mobile",
-    icon: `${import.meta.env.BASE_URL}Icons/mobile-recharge.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/mobile-recharge.webp`,
     title: "Mobile Prepaid",
     description: "Instant recharge for all operators with exciting cashback offers",
   },
   {
     id: "dth",
-    icon: `${import.meta.env.BASE_URL}Icons/dth-recharge.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/dth-recharge.webp`,
     title: "DTH Recharge",
     description: "Recharge your DTH connection instantly with best deals",
   },
   {
     id: "Cable",
-    icon: `${import.meta.env.BASE_URL}Icons/cable-tv.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/cable-tv.webp`,
     title: "Cable TV",
     description: "Pay your cable TV bills across all major service providers",
   },
   {
     id: "Electricity",
-    icon: `${import.meta.env.BASE_URL}Icons/electricity-bill.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/electricity-bill.webp`,
     title: "Electricity",
     description: "Pay your electricity bills quickly and earn rewards",
   },
   {
     id: "gas",
-    icon: `${import.meta.env.BASE_URL}Icons/lpg-cylinder.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/lpg-cylinder.webp`,
     title: "Gas Cylinder",
     description: "Book and pay for LPG cylinder with ease",
   },
   {
     id: "pipe",
-    icon: `${import.meta.env.BASE_URL}Icons/piped-gas.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/piped-gas.webp`,
     title: "Piped Gas",
     description: "Pay your piped gas bills securely and instantly",
   },
   {
     id: "water",
-    icon: `${import.meta.env.BASE_URL}Icons/water-bill.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/water-bill.webp`,
     title: "Water Bill",
     description: "Pay water bills for all major providers",
   },
   {
     id: "Broadband",
-    icon: `${import.meta.env.BASE_URL}Icons/wifi.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/wifi.webp`,
     title: "Broadband",
     description: "Pay broadband bills and stay connected",
   },
   {
     id: "Landline",
-    icon: `${import.meta.env.BASE_URL}Icons/landline.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/landline.webp`,
     title: "Landline",
     description: "Pay landline bills quickly and securely",
   },
   {
     id: "Fastag",
-    icon: `${import.meta.env.BASE_URL}Icons/fastag.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/fastag.webp`,
     title: "Fastag",
     description: "Recharge your Fastag for hassle-free toll payments",
   },
   {
     id: "CreditCard",
-    icon: `${import.meta.env.BASE_URL}Icons/credit-card.webp`,
+    icon: `${import.meta.env.BASE_URL}public/Icons/credit-card.webp`,
     title: "Credit Card",
     description: "Pay your credit card bills instantly and securely",
   },
@@ -81,7 +81,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" className="py-12 md:py-16 relative overflow-hidden bg-slate-950/50">
+    <section id="services" className="py-12 md:py-16 relative overflow-hidden bg-background">
       {/* Background Decorative Mesh / Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
@@ -147,3 +147,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+

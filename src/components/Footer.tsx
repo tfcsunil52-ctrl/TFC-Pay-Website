@@ -47,7 +47,6 @@ const serviceLinks = [
   { label: "Fastag", href: "#Fastag" },
   { label: "Broadband", href: "#Broadband" },
   { label: "Water Bill", href: "#water" },
-  { label: "Credit Card", href: "#CreditCard" },
 ];
 
 const companyLinks = [
@@ -186,7 +185,12 @@ const Footer = () => {
 
         <div className="pt-8 border-t border-border text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} TFC DIGITAL PVT LTD. All rights reserved.
+            <Link
+              to="/copyright"
+              className="hover:text-primary transition-colors hover:underline underline-offset-4"
+            >
+              © {new Date().getFullYear()} TFC DIGITAL PVT LTD. All rights reserved.
+            </Link>
           </p>
         </div>
       </div>

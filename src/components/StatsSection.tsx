@@ -65,9 +65,10 @@ const stats = [
 const StatsSection = () => {
     return (
         <section className="py-12 md:py-16 relative overflow-hidden bg-background">
-            {/* Standard borders matching premium section vibe */}
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+            {/* Center glow */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-[600px] h-[300px] bg-primary/10 rounded-full blur-[100px]" />
+            </div>
 
             <div className="container max-w-6xl mx-auto px-4 relative z-10">
                 <div className="text-center mb-10 md:mb-12">
