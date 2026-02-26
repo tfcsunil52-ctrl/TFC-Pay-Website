@@ -74,20 +74,20 @@ const Footer = () => {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* 1. Brand, About & Social */}
-          <div className="space-y-5">
+          <div className="space-y-4">
             <div className="flex items-center">
               <img src={`${import.meta.env.BASE_URL}logo.webp`} alt="TFCPAY Logo" className="h-6 w-auto object-contain" onError={(e) => {
                 e.currentTarget.style.display = 'none';
               }} />
             </div>
-            <div className="pt-2">
-              <h3 className="text-lg font-bold text-foreground mb-2">About Us</h3>
+            <div>
+              <h3 className="text-lg font-bold text-foreground mb-1">About Us</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 We provide user-friendly technology to vendors via in-app/web portal means. In turn, this gives retailers and distributors access to an array of financial products. We provide recharge & bill pay services by using safe and secure technology to assist people with our services.
               </p>
             </div>
-            <div className="pt-2">
-              <h4 className="text-sm font-semibold text-foreground mb-3">Follow Us</h4>
+            <div>
+              <h4 className="text-sm font-semibold text-foreground mb-2">Follow Us</h4>
               <div className="flex items-center gap-3">
                 {socialLinks.map((social) => (
                   <a
@@ -160,7 +160,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="space-y-4 pt-8 border-t border-border mt-8">
+            <div className="space-y-2.5 pt-6 border-t border-border mt-6">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
