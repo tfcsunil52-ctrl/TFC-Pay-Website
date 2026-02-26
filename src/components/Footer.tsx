@@ -141,26 +141,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 4. Newsletter & Contact */}
-          <div className="space-y-5">
-            <div>
-              <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Subscribe Newsletter</h3>
-              <p className="text-sm text-muted-foreground mb-3">
-                Be the first to receive all latest updates in your inbox.
-              </p>
-              <div className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="bg-background"
-                />
-                <Button size="icon" className="bg-primary hover:bg-primary/90 text-primary-foreground shrink-0">
-                  <Send className="w-4 h-4" />
-                </Button>
-              </div>
-            </div>
-
-            <div className="space-y-3 pt-10 border-t border-border mt-10">
+          {/* 4. Contact & Newsletter */}
+          <div className="space-y-8">
+            <div className="space-y-3">
               <div className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <div>
@@ -178,6 +161,23 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-primary shrink-0" />
                 <span>99999-06-222</span>
               </a>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-bold text-foreground mb-4 uppercase tracking-widest">Subscribe Newsletter</h3>
+              <p className="text-sm text-muted-foreground mb-3">
+                Be the first to receive all latest updates in your inbox.
+              </p>
+              <div className="flex gap-2">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  className="bg-background"
+                />
+                <Button size="icon" className="bg-primary hover:bg-primary/90 text-primary-foreground shrink-0">
+                  <Send className="w-4 h-4" />
+                </Button>
+              </div>
             </div>
           </div>
         </div>
