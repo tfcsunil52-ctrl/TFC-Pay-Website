@@ -95,14 +95,14 @@ const CommercialVideoSection = () => {
                                 loop
                                 playsInline
                                 preload="metadata"
-                                poster={`${import.meta.env.BASE_URL}public/thumbnail.webp`}
+                                poster={`${import.meta.env.BASE_URL}thumbnail.webp`}
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
                                 className="w-full h-full object-cover cursor-pointer"
                                 onClick={handlePlayPause}
                             >
                                 {shouldLoad && (
-                                    <source src={`${import.meta.env.BASE_URL}public/video.webm`} type="video/webm" />
+                                    <source src={`${import.meta.env.BASE_URL}video.webm`} type="video/webm" />
                                 )}
                             </video>
 
@@ -142,4 +142,5 @@ const CommercialVideoSection = () => {
 };
 
 export default CommercialVideoSection;
+
 

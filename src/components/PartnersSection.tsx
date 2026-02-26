@@ -59,3 +59,4 @@ const PartnersSection = () => {
 };
 
 export default PartnersSection;
+

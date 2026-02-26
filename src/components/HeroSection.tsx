@@ -34,12 +34,12 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <a href="https://play.google.com/store/apps/details?id=com.new_wltpe&hl=en_IN" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                 <Button size="lg" className="w-full bg-primary hover:bg-primary/90 text-black gap-2 shadow-xl">
-                  <img src={`${import.meta.env.BASE_URL}public/play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
+                  <img src={`${import.meta.env.BASE_URL}play-store.webp`} alt="Google Play" className="w-5 h-5 object-contain" />
                   Google Play
                 </Button>
               </a>
               <Button size="lg" variant="outline" className="w-full sm:w-auto border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 hover:text-white gap-2">
-                <img src={`${import.meta.env.BASE_URL}public/app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
+                <img src={`${import.meta.env.BASE_URL}app-store.webp`} alt="App Store" className="w-5 h-5 object-contain" />
                 App Store
               </Button>
             </div>
@@ -55,7 +55,7 @@ const HeroSection = () => {
             <div className="absolute inset-0 bg-primary/25 rounded-full blur-[120px] scale-150 z-0 pointer-events-none opacity-30" />
             <div className="relative z-10 w-full max-w-[500px]">
               <img
-                src={`${import.meta.env.BASE_URL}public/recharge and bill.webp`}
+                src={`${import.meta.env.BASE_URL}recharge and bill.webp`}
                 alt="TFC Pay Features"
                 className="w-full h-auto object-contain drop-shadow-2xl"
               />
@@ -68,4 +68,5 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
 

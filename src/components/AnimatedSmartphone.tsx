@@ -2,18 +2,18 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ICONS = [
-    { name: "Cable TV", src: `${import.meta.env.BASE_URL}public/Icons/cable-tv.webp` },
-    { name: "Credit card", src: `${import.meta.env.BASE_URL}public/Icons/credit-card.webp` },
-    { name: "DTH Recharge", src: `${import.meta.env.BASE_URL}public/Icons/dth-recharge.webp` },
-    { name: "Electricity Bill", src: `${import.meta.env.BASE_URL}public/Icons/electricity-bill.webp` },
-    { name: "Fastag", src: `${import.meta.env.BASE_URL}public/Icons/fastag.webp` },
-    { name: "Gas Cylinder", src: `${import.meta.env.BASE_URL}public/Icons/lpg-cylinder.webp` },
-    { name: "Landline", src: `${import.meta.env.BASE_URL}public/Icons/landline.webp` },
-    { name: "Mobile Recharge", src: `${import.meta.env.BASE_URL}public/Icons/mobile-recharge.webp` },
-    { name: "Piped Gas", src: `${import.meta.env.BASE_URL}public/Icons/piped-gas.webp` },
-    { name: "Rent", src: `${import.meta.env.BASE_URL}public/Icons/rent.webp` },
-    { name: "Water Bill", src: `${import.meta.env.BASE_URL}public/Icons/water-bill.webp` },
-    { name: "Wifi", src: `${import.meta.env.BASE_URL}public/Icons/wifi.webp` },
+    { name: "Cable TV", src: `${import.meta.env.BASE_URL}Icons/cable-tv.webp` },
+    { name: "Credit card", src: `${import.meta.env.BASE_URL}Icons/credit-card.webp` },
+    { name: "DTH Recharge", src: `${import.meta.env.BASE_URL}Icons/dth-recharge.webp` },
+    { name: "Electricity Bill", src: `${import.meta.env.BASE_URL}Icons/electricity-bill.webp` },
+    { name: "Fastag", src: `${import.meta.env.BASE_URL}Icons/fastag.webp` },
+    { name: "Gas Cylinder", src: `${import.meta.env.BASE_URL}Icons/lpg-cylinder.webp` },
+    { name: "Landline", src: `${import.meta.env.BASE_URL}Icons/landline.webp` },
+    { name: "Mobile Recharge", src: `${import.meta.env.BASE_URL}Icons/mobile-recharge.webp` },
+    { name: "Piped Gas", src: `${import.meta.env.BASE_URL}Icons/piped-gas.webp` },
+    { name: "Rent", src: `${import.meta.env.BASE_URL}Icons/rent.webp` },
+    { name: "Water Bill", src: `${import.meta.env.BASE_URL}Icons/water-bill.webp` },
+    { name: "Wifi", src: `${import.meta.env.BASE_URL}Icons/wifi.webp` },
 ];
 
 const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
@@ -40,7 +40,7 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                     {/* Bottom Layer (Background) */}
                     <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
                         <img
-                            src={`${import.meta.env.BASE_URL}public/bottom.webp`}
+                            src={`${import.meta.env.BASE_URL}bottom.webp`}
                             alt=""
                             className="w-full h-auto max-h-full object-contain"
                         />
@@ -65,7 +65,7 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                                     />
                                     {/* Paid Stamp Animation */}
                                     <motion.img
-                                        src={`${import.meta.env.BASE_URL}public/paid.webp`}
+                                        src={`${import.meta.env.BASE_URL}paid.webp`}
                                         alt="Paid"
                                         initial={{ opacity: 0, scale: 2, rotate: -45 }}
                                         animate={{ opacity: 1, scale: 1, rotate: -12 }}
@@ -93,7 +93,7 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
                     {/* Top Layer (Foreground) */}
                     <div className="absolute inset-0 z-20 flex items-center justify-center pointer-events-none">
                         <img
-                            src={`${import.meta.env.BASE_URL}public/top.webp`}
+                            src={`${import.meta.env.BASE_URL}top.webp`}
                             alt="TFC Pay App Interface"
                             className="w-full h-auto max-h-full object-contain"
                         />
@@ -109,4 +109,5 @@ const AnimatedSmartphone = ({ className = "" }: { className?: string }) => {
 };
 
 export default AnimatedSmartphone;
+
 
