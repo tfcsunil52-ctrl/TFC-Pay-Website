@@ -1,19 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <title>TFC Pay</title>
     <script>
-        // GitHub Pages SPA redirect trick
-        // Stores the current path and redirects to index.html
-        var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1).join('/') +
-            '/?p=' + encodeURIComponent(l.pathname + l.search) +
-            (l.hash || '')
-        );
+        // Save current path and redirect to index
+        sessionStorage.redirect = location.pathname;
+        location.href = '/TFC-Pay-Website/';
     </script>
 </head>
 

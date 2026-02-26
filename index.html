@@ -8,7 +8,7 @@
   <title>TFC Pay</title>
   <meta name="description" content="TFC Pay app" />
   <meta name="author" content="TFC Pay" />
-  <link rel="icon" type="image/webp" href="/favicon.webp" />
+  <link rel="icon" type="image/webp" href="/TFC-Pay-Website/favicon.webp" />
 
   <meta property="og:title" content="TFC Pay" />
   <meta property="og:description" content="TFC Pay app" />
@@ -19,26 +19,20 @@
   <meta name="twitter:site" content="@TFCPay" />
   <meta name="twitter:image" content="/logo.webp" />
   <script>
-    // GitHub Pages SPA: restore path from ?p= query param set by 404.html
+    // GitHub Pages SPA: restore path saved by 404.html
     (function () {
       var redirect = sessionStorage.redirect;
       delete sessionStorage.redirect;
-      if (redirect && redirect !== location.href) {
+      if (redirect && redirect !== location.pathname) {
         history.replaceState(null, null, redirect);
-      }
-      // Also handle ?p= param from 404.html
-      var search = window.location.search;
-      if (search.indexOf('?p=') === 0) {
-        var path = decodeURIComponent(search.slice(3));
-        history.replaceState(null, null, path || '/');
       }
     })();
   </script>
-  <script type="module" crossorigin src="/assets/index-CZ-QkWsa.js"></script>
-  <link rel="modulepreload" crossorigin href="/assets/vendor-react-DMVaYkSA.js">
-  <link rel="modulepreload" crossorigin href="/assets/vendor-animations-B6P43qXQ.js">
-  <link rel="modulepreload" crossorigin href="/assets/vendor-ui-CO5TyJqq.js">
-  <link rel="stylesheet" crossorigin href="/assets/index-CaJ1aDZW.css">
+  <script type="module" crossorigin src="/TFC-Pay-Website/assets/index--PWkXAOW.js"></script>
+  <link rel="modulepreload" crossorigin href="/TFC-Pay-Website/assets/vendor-react-DMVaYkSA.js">
+  <link rel="modulepreload" crossorigin href="/TFC-Pay-Website/assets/vendor-animations-B6P43qXQ.js">
+  <link rel="modulepreload" crossorigin href="/TFC-Pay-Website/assets/vendor-ui-CO5TyJqq.js">
+  <link rel="stylesheet" crossorigin href="/TFC-Pay-Website/assets/index-CaJ1aDZW.css">
 </head>
 
 <body>
